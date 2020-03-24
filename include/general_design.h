@@ -10,3 +10,4 @@ void loadingbar();
 void middle1(void);
 void middtab1(void);
 void backuploader(void);
+void main_menu();
