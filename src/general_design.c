@@ -1,6 +1,6 @@
 #include<stdio.h>
 #include<stdlib.h>
-// #include<conio.h>
+#include<conio.h>
 #include<string.h>
 #include<windows.h>
 #include<time.h>
@@ -49,10 +49,10 @@ void ccolor(int clr){
 void pwellcome(){
 	ccolor(26);
 
-	char welcome[50]="WELCOME";
-	char welcome2[50]=" TO";
-	char welcome3[50]=" FOOD ORDERING";
-	char welcome4[50]=" KIOSK MACHINE";
+	char welcome[50]=" WELCOME ";
+	char welcome2[50]=" TO  ";
+	char welcome3[50]=" FOOD ORDERING  ";
+	char welcome4[50]=" KIOSK MACHINE  ";
 	printf("\n\n\n\n\n\t\t\t");
 	for(int wlc=0; wlc<strlen(welcome);wlc++){
              ccolor(120+(wlc*9));

@@ -74,6 +74,20 @@ void insertend(int data, char foodname[25], int quantity, float price){
 	}
 
 }
+void updatefood(int udata, int uquantity){
+
+	node *temp;
+	temp = list;
+
+	while(temp->data!=udata){
+		temp = temp->next;
+
+	}
+	if(temp->data == udata){
+		temp->quantity = uquantity;
+	}
+
+}
 
 void foodlist(){
 
