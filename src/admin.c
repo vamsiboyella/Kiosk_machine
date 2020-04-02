@@ -1,3 +1,15 @@
+/**
+ * @file admin.c
+ *
+ * @brief In this file we will be handling all the admin functionalities of our system.
+ *
+ * @author Vamsi Boyella - 
+ * @author Baji Baba Shaik - 
+ * @author Matheen Mohammed- 
+ * @author Sangamesh Patlolla-
+ * 
+ */
+
 #include<stdio.h>
 #include<stdlib.h>
 #include<conio.h>
