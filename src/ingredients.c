@@ -1,6 +1,6 @@
 #include <stdio.h>
 #include<string.h>
- 
+#include "ingredients.h"
 #define MAXCHAR 1000
 
 
