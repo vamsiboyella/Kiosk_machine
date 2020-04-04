@@ -3,10 +3,10 @@
  *
  * @brief This is the main file from where all the funtions will be handled by the system.
  * 
- * @author Vamsi Boyella - 
- * @author Baji Baba Shaik - 
- * @author Matheen Mohammed- 
- * @author Sangamesh Patlolla-
+ * @author Vamsi Boyella - vboye103@uottawa.ca
+ * @author Baji Baba Shaik - bshai015@uottawa.ca
+ * @author Matheen Mohammed- MatheenMohammed@cmail.carleton.ca
+ * @author Sangamesh Patlolla-SangameshwarPatlolla@cmail.carleton.ca
  */
 /**
  * @brief This function is used to create a list of menu items.

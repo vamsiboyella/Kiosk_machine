@@ -3,70 +3,78 @@
  *
  * @brief This is the main file of design module in system from which all the funtions related to design will be handled.
  *
- * @author 
- * 
+ * @author Vamsi Boyella - vboye103@uottawa.ca
+ * @author Baji Baba Shaik - bshai015@uottawa.ca
+ * @author Matheen Mohammed- MatheenMohammed@cmail.carleton.ca
+ * @author Sangamesh Patlolla-SangameshwarPatlolla@cmail.carleton.ca
  */
 
 /**
- * @brief A Function to store the details of patients in "patient_record.csv".
+ * @brief This function is used to clear the screen.
  * 
- * @details Function "cls" . 
- * Invokes disease function which identifies symptom and allocates room accordingly based on availability.
+ * @details This is a predefined function which is used to clear the screen.
+ * This function is mainly used in the design part of the system.
  * 
- * @return Return value is void.
+ * @return There is no return value for this function.
  *
  */ 
 void cls();
 
 /**
- * @brief A Function to store the details of patients in "patient_record.csv".
+ * @brief This function is used to print a string.
  * 
- * @details Function "echo" . 
- * Invokes disease function which identifies symptom and allocates room accordingly based on availability.
- * 
- * @return Return value is void.
+ * @param[in] print[]--- we will provide a string which we want to print.
+ *  
+ * @details With the help of the above input parameter it will display the output accordingly
+ * This function is used in place of Printf fucntion in our system.
+ *
+ * @return There is no return value for this function.
  *
  */ 
 void echo(char print[]);
 
 /**
- * @brief A Function to store the details of patients in "patient_record.csv".
+ * @brief A Function which is used to give the line spacing.
  * 
- * @details Function "br". 
- * Invokes disease function which identifies symptom and allocates room accordingly based on availability.
+ * @param[in] line--- user will be giving number of lines here.
+ *  
+ * @details With the help of this input this function will be providing the number of line spaces accordingly.
  * 
- * @return Return value is void.
+ * @return There is no return value for this function.
  *
  */ 
 void br(int line);
 
 /**
- * @brief A Function to store the details of patients in "patient_record.csv".
+ * @brief This function is used to provide spacing between the characters.
  * 
- * @details Function "pre" . 
- * Invokes disease function which identifies symptom and allocates room accordingly based on availability.
+ * @param[in] tab--- An input in form of number will be provided.
+ *  
+ * @details Based on the input provided the number of tab spaces will be provied.
  * 
- * @return Return value is void.
+ * @return There is no return value for the function.
  *
  */ 
 void pre(int tab);
 
 /**
- * @brief A Function to store the details of patients in "patient_record.csv".
+ * @brief This function is used to handle the spacing conventions in our system.
  * 
- * @details Function "span". 
- * Invokes disease function which identifies symptom and allocates room accordingly based on availability.
+ * @param[in] space--- An number will be givien as input.
  * 
- * @return Return value is void.
+ * @details Based on the input provided the number of empty spaces will be provided in our code.
+ * 
+ * @return There is no return value for this function.
  *
  */ 
 void span(int space);
 
 /**
- * @brief A Function to store the details of patients in "patient_record.csv".
+ * @brief This function is used to handle the color for the welcome message in our system.
  * 
- * @details Function "clr" . 
- * Invokes disease function which identifies symptom and allocates room accordingly based on availability.
+ * @param[in] clr--- we will be giving the color number to the system as input.
+ * 
+ * @details Based on the input provided that particular color will be assigned to the message.
  * 
  * @return Return value is void.
  *
@@ -74,10 +82,10 @@ void span(int space);
 void ccolor(int clr);
 
 /**
- * @brief A Function to store the details of patients in "patient_record.csv".
+ * @brief This function is used to handle the welcome message of our kiosk machine. 
  * 
- * @details Function "pwellcome" . 
- * Invokes disease function which identifies symptom and allocates room accordingly based on availability.
+ * @details Once our kiosk machine is opened user will be given an good and handy design.
+ *  The complete welcome message given to the user will be handled in this function.
  * 
  * @return Return value is void.
  *
@@ -85,10 +93,10 @@ void ccolor(int clr);
 void pwellcome();
 
 /**
- * @brief A Function to store the details of patients in "patient_record.csv".
+ * @brief This function is used to handle the loading bar in our system. 
  * 
- * @details Function "loadingbar" . 
- * Invokes disease function which identifies symptom and allocates room accordingly based on availability.
+ * @details There are no inputs for this function.
+ * The loading bar of our system will be managed with the help of other functions like ccolor etc.
  * 
  * @return Return value is void.
  *
@@ -96,10 +104,9 @@ void pwellcome();
 void loadingbar();
 
 /**
- * @brief A Function to store the details of patients in "patient_record.csv".
+ * @brief This function is used to handle the line spacing.
  * 
- * @details Function "middle1" . 
- * Invokes disease function which identifies symptom and allocates room accordingly based on availability.
+ * @details There are no input parameters for this function it directly provides 7 line spaces.
  * 
  * @return Return value is void.
  *
@@ -107,23 +114,21 @@ void loadingbar();
 void middle1(void);
 
 /**
- * @brief A Function to store the details of patients in "patient_record.csv".
+ * @brief This function is used to handle the character spaces.
  * 
- * @details Function "middtab1" . 
- * Invokes disease function which identifies symptom and allocates room accordingly based on availability.
+ * @details There are no input parameters for this function, it directly provides 6 character spaces.
  * 
- * @return Return value is void.
+ * @return There is no return value for this function.
  *
  */ 
 void middtab1(void);
 
 /**
- * @brief A Function to store the details of patients in "patient_record.csv".
+ * @brief In this function the design of backup loader will be handled.
  * 
- * @details Function "backuploader" . 
- * Invokes disease function which identifies symptom and allocates room accordingly based on availability.
+ * @details There are no input values for this function it handles the backup loading part of the system which helps the admin to have the backup of data.
  * 
- * @return Return value is void.
+ * @return No return value for this function.
  *
  */ 
 void backuploader(void);

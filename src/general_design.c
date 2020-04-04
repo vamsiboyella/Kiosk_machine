@@ -1,3 +1,14 @@
+/**
+ * @file general_design.c
+ *
+ * @brief In this file we will be handling all the design functionalities of our system.
+ *
+ * @author Vamsi Boyella - vboye103@uottawa.ca
+ * @author Baji Baba Shaik - bshai015@uottawa.ca
+ * @author Matheen Mohammed- MatheenMohammed@cmail.carleton.ca
+ * @author Sangamesh Patlolla-SangameshwarPatlolla@cmail.carleton.ca
+ */
+
 #include<stdio.h>
 #include<stdlib.h>
 #include<conio.h>

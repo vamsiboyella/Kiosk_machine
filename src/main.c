@@ -5,7 +5,7 @@
  *
  * @author Vamsi Boyella - 
  * @author Baji Baba Shaik - 
- * @author Matheen Mohammad- 
+ * @author Matheen Mohammed- 
  * @author Sangamesh Patlolla-
  */
 #include<stdio.h>
