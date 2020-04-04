@@ -10,12 +10,13 @@
  */
 #include<stdio.h>
 #include<stdlib.h>
-#include<conio.h>
+// #include<conio.h>
 #include<string.h>
 #include<windows.h>
 #include<time.h>
 #include "general_design.h"
 #include "admin.h"
+#include "ingredients.h"
 
 
 struct Node{
@@ -196,7 +197,7 @@ int main(){
 		}
 
 		else if(main_menu_choice==3){
-			
+			read_Ingredients();
             goto mainmenu;
 
 		}
