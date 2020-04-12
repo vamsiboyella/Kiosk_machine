@@ -1,12 +1,19 @@
+/**
+ * @file ingredients.c
+ *
+ * @brief With the help of menu.txt file the ingredients in our menu are displayed and added accordingly.
+ * 
+ * @author Vamsi Boyella - vboye103@uottawa.ca
+ * @author Baji Baba Shaik - bshai015@uottawa.ca
+ * @author Matheen Mohammed- MatheenMohammed@cmail.carleton.ca
+ * @author Sangamesh Patlolla-SangameshwarPatlolla@cmail.carleton.ca
+ */
+
+
 #include <stdio.h>
 #include<string.h>
 #include "ingredients.h"
 #define MAXCHAR 1000
-
-
-
- 
-
 
 
 void print_line(char *str){
@@ -105,14 +112,4 @@ int scan_new_ingredients(){
 
   
 }
-
-     
-
-int main() {    
-    
-    read_Ingredients();
-    scan_new_ingredients();
-    getchar();
-    return 0;
-}
-
+   

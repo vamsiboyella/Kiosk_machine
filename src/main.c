@@ -2,15 +2,15 @@
  * @file main.c
  *
  * @brief Implementation of the main portion of the kioskmachine.
- *
- * @author Vamsi Boyella - 
- * @author Baji Baba Shaik - 
- * @author Matheen Mohammed- 
- * @author Sangamesh Patlolla-
+ * 
+ * @author Vamsi Boyella - vboye103@uottawa.ca
+ * @author Baji Baba Shaik - bshai015@uottawa.ca
+ * @author Matheen Mohammed- MatheenMohammed@cmail.carleton.ca
+ * @author Sangamesh Patlolla-SangameshwarPatlolla@cmail.carleton.ca
  */
 #include<stdio.h>
 #include<stdlib.h>
-// #include<conio.h>
+#include<conio.h>
 #include<string.h>
 #include<windows.h>
 #include<time.h>
@@ -64,16 +64,16 @@ int main(){
 
 	
 	head = NULL;
-	insertfirst(1,"Hot Cake ",8,720.83);
-	insertend(2,"Coffee   ",46,70.23);
-	insertend(3,"Ice-Cream",46,70.23);
-	insertend(4,"Sandwich ",34,60.23);
-	insertend(5,"Burger   ",23,120.00);	
-	insertend(6,"Pizza    ",13,100.00);
-	insertend(7,"Chicken  ",7,520.29);
-	insertend(8,"Nun-Bread",121,35.13);
-	insertend(9,"Cold Drinks",73,20.00);
-	insertend(10,"Muffin  ",83,50.00);
+	insertfirst(1,"Hot Cake ",8,10.83);
+	insertend(2,"Coffee   ",46,3.23);
+	insertend(3,"Ice-Cream",46,6.23);
+	insertend(4,"Bagel ",34,12.23);
+	insertend(5,"Burger   ",23,11.00);	
+	insertend(6,"Pizza    ",13,16.00);
+	insertend(7,"Chicken Muffin",7,17.29);
+	insertend(8,"Angus",121,6.13);
+	insertend(9,"Cold Drinks",73,8.00);
+	insertend(10,"Biryani  ",83,13.00);
 
 
 
@@ -140,7 +140,9 @@ int main(){
 				fflush(stdin);   scanf("%d",&adminchoise);
 
 				if(adminchoise==1){					
+					cls();  middle1(); pre(4);   printf("Todays Total Cash : %0.2f  \n",totalmoney);
 
+					Sleep(2000);
 					goto adminchoice;
 				}
 				else if(adminchoise==2){
@@ -152,6 +154,25 @@ int main(){
 
 				}
 				else if(adminchoise==4){
+					cls();
+					middle1();pre(2);
+					printf("Enter Serial No of the Food To Delete : ");
+					fdelete: ;
+					int fdelete;
+					fflush(stdin); scanf("%d",&fdelete);
+					node *temp;
+					temp=list;
+					while(temp->data != fdelete){
+						temp = temp->next;
+					}
+					if(temp->data==fdelete){
+						deletefood(fdelete);
+					}
+					else{
+						br(2); pre(2); printf("Please Enter Correct Number :  "); Sleep(500);
+						goto fdelete;
+					}
+
 					goto adminchoice;
 				}
 
@@ -162,11 +183,68 @@ int main(){
 				}
 
 				 else if(adminchoise==6){
+					cls();
+					char ffoodname[25];
+					int fquantity;
+					int data;
+					float fprice;
+					int fposi;
+
+					foodchoice_id:
+
+					br(3);pre(3);      printf(" Please enter the food choice Id you want to update :  ");
+
+					fflush(stdin);  scanf("%d",&data);  
+					
+                            node *exist;
+                            exist = list;
+                      while(exist->data!=data){
+                            if(exist->next==NULL){
+								cls(); br(5);pre(3);  printf(" Food Id doesn't exist, Please Re-Enter  "); Sleep(2000);
+                       			goto foodchoice_id;
+                                //break;
+                            }
+                        exist=exist->next;
+                      } 				
+					br(2);pre(4);  printf("  Enter the Food Name  :  ");
+					fflush(stdin);	scanf("%[^\n]s",ffoodname);			    
+                    
+					br(2);pre(4);  printf(" Enter the qunatity of stock :  ");
+					fflush(stdin);  scanf("%d",&fquantity); 				
+                   
+                    fflush(stdin);
+
+					br(2);pre(4);  printf(" Enter Food Price :  ");fflush(stdin);
+
+					scanf("%f",&fprice);
+					br(2);pre(4);  printf("Updating Food item");for(int cs=0;cs<4;cs++){printf(" .");Sleep(500);}
+					updateitem(data,ffoodname,fquantity,fprice);
+
+					br(2);pre(4);      printf("Updating Food  Successfull....\n");
+
+					Sleep(2000);
 					goto adminchoice;
 
 				 }
                      
 				else if(adminchoise==7){
+					char date[35]=__DATE__;
+
+					strcat(date,".txt");
+					FILE *fptr;
+					fptr=fopen(date,"w");
+					backuploader();
+					if(fptr==NULL){
+						br(3); pre(3); printf("Error!"); Sleep(500);
+						goto adminchoise;
+					}
+					fprintf(fptr,"Total Cash Today : %0.2f\n\n\n",totalmoney);
+					fprintf(fptr,"Card No ------- Money \n\n");
+					for(int l=1; l<=c;l++){
+						fprintf(fptr,"%d ------- %0.2f \n",cardno[l],cardmoney[l]);
+					}
+					br(2);pre(4); printf("Backup Successfull..."); Sleep(1500);
+					fclose(fptr);
 
 					goto adminchoice;
 				}

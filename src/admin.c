@@ -53,6 +53,66 @@ void insertfirst(int data, char foodname[25], int quantity, float price){
 	list = head ;
 
 }
+void updateitem(int data, char foodname[25], int quantity, float price){
+
+	node *temp;
+	temp = list;
+
+	
+	while(temp->data!=data){
+		temp = temp->next;
+
+	}
+	if(temp->data == data){
+		temp->quantity = quantity;
+		temp->price=price;
+		strcpy(temp->foodname,foodname);
+	}
+}
+
+void deletefood(int serial){
+
+	node *temp;
+	temp=(node *)malloc(sizeof(node));
+
+	temp = list;
+
+
+	if(temp->data != serial){
+
+		while(temp->next->data != serial){
+			temp = temp->next;
+		}
+
+		if(temp->next->data == serial){
+
+			temp->next = temp->next->next;
+			cls();
+			printf("\n\n\n\n\t\t\tDeleting Item %d ",serial);for(int cs=0;cs<4;cs++){printf(" .");Sleep(400);}
+
+			printf("\n\n\n\n\t\t\tDeleted Successfylly \n"); Sleep(500);
+
+		}
+		else{
+			printf("\n\n\n\n\t\t\tFood Item Not Found\n"); Sleep(500);
+		}
+
+		head = temp ;
+
+	}
+	else{
+
+		temp = temp->next;
+		cls();
+		printf("\n\n\n\n\t\t\tDeleting Item %d ",serial);for(int cs=0;cs<4;cs++){printf(" .");Sleep(400);}
+
+		printf("\n\n\n\n\t\t\tDeleted Successfylly \n"); Sleep(500);
+
+		head = temp ;
+
+		list=head;
+	}
+}
 
 void insertend(int data, char foodname[25], int quantity, float price){
 

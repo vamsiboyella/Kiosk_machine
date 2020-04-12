@@ -24,20 +24,19 @@
 void insertfirst(int data, char foodname[25], int quantity, float price);
 
 /**
- * @brief This function is used to add more items at their respective places in the menu.
+ * @brief This function is used to update menu items information.
  *
- * @param[in] pos--- This parameter is used to navigate the position in the linked list.
  * @param[in] data--- This parameter is used to give the item ID.
  * @param[in] foodname--- This parameter is used to give a name for an particular food item.
  * @param[in] quantity--- This parameter is used to give the total number of items present in out stock. 
  * @param[in] price--- This parameter is used to assign the price of that item.
  *
- * @details Function "insertmid" takes input from the user and adds the items of the menu at their respective places. It can also be used to ovverride the menu.
+ * @details Function "updateitem" takes input from the user and adds the items of the menu at their respective places. It can also be used to ovverride the menu.
  * 
  * @return There is no return value for this function.
  *
  */ 
-void insertmid(int pos, int data, char foodname[25], int quantity, float price);
+void updateitem(int data, char foodname[25], int quantity, float price);
 
 /**
  * @brief This function is used to add the last item in the menu.
