@@ -19,6 +19,9 @@
 #include "../include/ingredients.h"
 
 
+void display_menu(int order, int quantity, int or_no);
+int view_orders(int order,int total_order[100],	int order_quantity[100]);
+
 struct Node{
 
 	char foodname[50];
@@ -260,8 +263,14 @@ int main(){
 				}
 
 				else if(adminchoise==5){
+					cls();    foodlist(); Sleep(1000);		
+
+					br(2);pre(4);  printf("1. <-- back  \n\n");pre(5);
+
+					fflush(stdin);   scanf("%d",&any);
 
 					goto adminchoice;
+					
 
 				}
 
@@ -332,6 +341,17 @@ int main(){
 					goto adminchoice;
 				}
 				else if(adminchoise==8){
+					
+					
+					
+					
+					int i=view_orders( order, total_order,order_quantity);
+					if(i){
+					goto adminchoice;
+					}	
+					else{
+					goto adminchoice;	
+					}
 					goto adminchoice;
 				}
 
@@ -589,5 +609,55 @@ int main(){
 		br(2); pre(4); echo("Please Choice From List"); br(2);Sleep(300);
 		goto mainmenu;
 	}
+
+}
+
+
+int view_orders(int order,int total_order[100],	int order_quantity[100]){
+	cls();br(2);pre(2);
+	ccolor(26);
+	printf("\n\t\t"); ccolor(240);
+	printf("______________________________________________________ "); ccolor(26);
+	printf("\n\t\t");  ccolor(240);
+	printf("|  Order No.  |   FooD Name   |  Quantity |  In Stock |"); ccolor(26);
+	printf("\n\t\t");  ccolor(240);
+	printf("------------------------------------------------------"); ccolor(26);
+	for(int o=1;o<=order;o++){
+		display_menu(total_order[o],order_quantity[o],o);
+	}
+	br(2);pre(4);  printf("1. <-- back  \n\n");pre(5);
+	int any;
+	fflush(stdin);   scanf("%d",&any);
+	return 1;
+
+}
+void display_menu(int order, int quantity, int or_no){
+
+	ccolor(26);
+
+	node *temp;
+
+	temp = list;
+
+	while(temp->data != order){
+
+		temp = temp->next;
+
+	}
+	if(temp->data == order){
+
+		ccolor(26);
+
+		printf("\n\t\t"); ccolor(62);
+		printf("|     %d      |    %s  |     %d     |     %d     |",or_no,temp->foodname,quantity,temp->quantity);
+		ccolor(26);
+		printf("\n\t\t"); ccolor(62);
+		printf("-------------------------------------------------------");
+
+		Sleep(100);
+
+	}
+
+	ccolor(26);
 
 }
