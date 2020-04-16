@@ -15,12 +15,12 @@
 #include<string.h>
 #include<windows.h>
 #include<time.h>
-#include "general_design.h"
+#include "../include/general_design.h"
 
 
 void cls(){
 
-	system("clear");
+	system("cls");
 
 }
 

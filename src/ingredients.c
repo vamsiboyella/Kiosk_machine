@@ -12,7 +12,7 @@
 
 #include <stdio.h>
 #include<string.h>
-#include "ingredients.h"
+#include "../include/ingredients.h"
 #define MAXCHAR 1000
 
 

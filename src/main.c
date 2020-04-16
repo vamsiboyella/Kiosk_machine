@@ -14,9 +14,9 @@
 #include<string.h>
 #include<windows.h>
 #include<time.h>
-#include "general_design.h"
-#include "admin.h"
-#include "ingredients.h"
+#include "../include/general_design.h"
+#include "../include/admin.h"
+#include "../include/ingredients.h"
 
 
 struct Node{
