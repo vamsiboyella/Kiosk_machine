@@ -10,13 +10,27 @@
  */
 #include<stdio.h>
 #include<stdlib.h>
-// #include<conio.h>
+#include<conio.h>
 #include<string.h>
 #include<windows.h>
 #include<time.h>
 #include "general_design.h"
 #include "admin.h"
 #include "ingredients.h"
+
+/* minimum and maximum credit card number lengths */
+#define MIN_LENGTH 13
+#define MAX_LENGTH 16
+#define ENTER 13
+#define TAB 9
+#define BKSP 8
+
+/* function prototypes */
+bool isNumeric(char *);
+bool luhn(char *);
+int  addDigits(int);
+void getInput(char *);
+void checkPrefix(char *);
 
 
 struct Node{
@@ -139,47 +153,288 @@ int main(){
 
 				fflush(stdin);   scanf("%d",&adminchoise);
 
-				if(adminchoise==1){					
+				if(adminchoise==1){
 
-					goto adminchoice;
+					cls();  middle1(); pre(4);   printf("Todays Total Cash : %0.2f  \n",totalmoney);
+
+					Sleep(2000);
+
+					goto adminchoise;
 				}
+
 				else if(adminchoise==2){
-					goto adminchoice;
+
+					if(c!=0){
+
+						cls();  br(3); pre(4);
+
+						printf(" ____________________________\n");pre(4);
+						printf("|   Card NO.   |   Money $   |\n");pre(4);
+						printf("------------------------------\n");pre(4);
+
+						for(int z=1; z<=c;z++){
+
+							printf("|  %s  | %0.2f |\n",cardno[z],cardmoney[z]);pre(4);
+							printf("------------------------------\n");pre(4);
+							Sleep(150);
+
+						}
+						Sleep(1500);
+					}
+
+					if(c==0){
+
+						cls();  middle1(); pre(4);
+					printf("No Card History\n");}
+					Sleep(1500);
+					goto adminchoise;
 				}
 
 				else if(adminchoise==3){
-					goto adminchoice;
+
+					foodadd:
+					cls();
+//step 3
+					char ffoodname[25];
+					int fquantity;
+					int fdata;
+					float fprice;
+					int fqresult;
+					
+					br(3);pre(4);      printf(" Enter Food Name :  ");
+
+					fflush(stdin);     scanf("%[^\n]s",ffoodname);
+						
+			
+					
+					
+					fquantity: 
+					fflush(stdin);
+					
+					
+					br(2);pre(4);  printf(" Enter Food Quantity :  ");
+					fqresult = scanf("%d",&fquantity); 
+					if(!fqresult){
+					br(2);pre(4);
+					printf("Enter valid value");
+					goto fquantity;
+					}
+					fflush(stdin);
+					
+					
+					foodserial:
+					br(2);pre(4);  printf(" Enter Food Serial :  ");
+                    fqresult=scanf("%f",&fdata);
+					if(!fqresult){
+					br(2);pre(4);
+					printf("Enter valid value");
+					goto foodserial;
+					}
+                            node *exist;
+                            exist = list;
+                      while(exist->data!=fdata){
+                            if(exist->next==NULL){
+                                break;
+                            }
+                        exist=exist->next;
+                      }
+                      if(exist->data==fdata){
+                       cls(); br(5);pre(3);  printf(" Food Serial Already Exist, Please Re-Enter  "); Sleep(2000);
+                       goto foodserial;
+                      }
+
+                    fprice:
+                      fflush(stdin);
+
+					br(2);pre(4);  printf(" Enter Food Price :  ");fflush(stdin);
+
+					fqresult=scanf("%f",&fprice);
+					if(!fqresult){
+					br(2);pre(4);
+					printf("Enter valid value");
+					goto fprice;
+					}
+
+
+					br(2);pre(4);  printf("Submiting your data");for(int cs=0;cs<4;cs++){printf(" .");Sleep(500);}
+
+
+					insertend(fdata,ffoodname,fquantity,fprice);
+
+					br(2);pre(4);      printf("Adding Food  Successfull....\n");
+
+					Sleep(2000);
+
+					goto adminchoise;
 
 				}
+
 				else if(adminchoise==4){
-					goto adminchoice;
+
+					cls();
+					middle1();pre(2);
+					printf("Enter Serial No of the Food To Delete : ");
+					fdelete: ;
+					int fdelete;
+					fflush(stdin);
+					int fqresult=scanf("%f",&fdelete);
+					if(!fqresult){
+					br(2);pre(4);
+					printf("Enter valid value");
+					goto fdelete;
+					}
+					node *temp;
+					temp=list;
+					while(temp->data != fdelete){
+						temp = temp->next;
+					}
+					if(temp->data==fdelete){
+						deletefood(fdelete);
+					}
+					else{
+						br(2); pre(2); printf("Please Enter Correct Number :  "); Sleep(500);
+						goto fdelete;
+					}
+
+
+					goto adminchoise;
 				}
 
 				else if(adminchoise==5){
 
-					goto adminchoice;
+					cls();    foodlist(); Sleep(1000);
+
+					br(2);pre(4);  printf("1. <-- back  \n\n");pre(5);
+
+					fflush(stdin);   scanf("%d",&any);
+
+					goto adminchoise;
 
 				}
 
-				 else if(adminchoise==6){
-					goto adminchoice;
+				else if(adminchoise==6){
+					cls();
+					char ffoodname[25];
+					int fquantity;
+					int data;
+					float fprice;
+					int fposi;
 
-				 }
-                     
+					foodchoice_id:
+
+					br(3);pre(3);      printf(" Please enter the food choice Id you want to update :  ");
+
+					fflush(stdin);  
+					fqresult=scanf("%f",&data);
+					if(!fqresult){
+					br(2);pre(4);
+					printf("Enter valid value");
+					goto foodchoice_id;
+					}
+					        node *exist;
+                            exist = list;
+                      while(exist->data!=data){
+                            if(exist->next==NULL){
+								cls(); br(5);pre(3);  printf(" Food Id doesn't exist, Please Re-Enter  "); Sleep(2000);
+                       			goto foodchoice_id;
+                                //break;
+                            }
+                        exist=exist->next;
+                      } 				
+					br(2);pre(4);  printf("  Enter the Food Name  :  ");
+					fflush(stdin);	
+					scanf("%[^\n]s",ffoodname);			    
+                    stock:
+					br(2);pre(4);  printf(" Enter the qunatity of stock :  ");
+					fflush(stdin);  
+					fqresult=scanf("%f",&data);
+					if(!fqresult){
+					br(2);pre(4);
+					printf("Enter valid value");
+					goto stock;
+					}
+					      
+                    fflush(stdin);
+					fp:
+					br(2);pre(4);  printf(" Enter Food Price :  ");fflush(stdin);
+
+					fqresult=scanf("%f",&fprice);
+					if(!fqresult){
+					br(2);pre(4);
+					printf("Enter valid value");
+					goto fp;
+					}
+					
+					br(2);pre(4);  printf("Updating Food item");for(int cs=0;cs<4;cs++){printf(" .");Sleep(500);}
+					updateitem(data,ffoodname,fquantity,fprice);
+
+					br(2);pre(4);      printf("Updating Food  Successfull....\n");
+
+					Sleep(2000);
+
+					goto adminchoise;
+
+				}    
+				  ///Backup System				
+				
 				else if(adminchoise==7){
 
-					goto adminchoice;
+
+					char date[35]=__DATE__;
+
+					strcat(date,".txt");
+					FILE *fptr;
+					fptr=fopen(date,"w");
+					backuploader();
+					if(fptr==NULL){
+						br(3); pre(3); printf("Error!"); Sleep(500);
+						goto adminchoise;
+					}
+					fprintf(fptr,"Total Cash Today : %0.2f\n\n\n",totalmoney);
+					fprintf(fptr,"Card No ------- Money \n\n");
+					for(int l=1; l<=c;l++){
+						fprintf(fptr,"%s ------- %0.2f \n",cardno[l],cardmoney[l]);
+					}
+					br(2);pre(4); printf("Backup Successfull..."); Sleep(1500);
+
+
+
+					fclose(fptr);
+					goto adminchoise;
 				}
+
 				else if(adminchoise==8){
-					goto adminchoice;
+					int i=view_orders( order, total_order,order_quantity);
+					if(i){
+					goto adminchoise;
+					}	
+					else{
+					goto adminchoise;	
+					}
+
 				}
+
+				else if(adminchoise==9){
+					cls();
+					int i= scan_new_ingredients();
+					if(i){						
+						br(2);pre(4); printf("Update of food infromation successfull..."); Sleep(1500);
+						goto adminchoise;
+					}
+					else{
+						goto adminchoise;
+					}
+
+				}
+
 				else if(adminchoise==0){
+
 					goto mainmenu;
 				}
 
 				else{
 					br(2); pre(4); printf("Please Select From List :  "); Sleep(500);
-					goto adminchoice;
+					goto adminchoise;
 				}
 
 
@@ -197,16 +452,25 @@ int main(){
 		}
 
 		else if(main_menu_choice==3){
-			read_Ingredients();
-            goto mainmenu;
+			cls();
+			int i=read_Ingredients();
+			 if(i){
+			Sleep(4000);
+			 goto mainmenu;
+			 }
+			 else{
+			Sleep(4000);
+			goto mainmenu;
+
+			 }
 
 		}
-		else{
+
+	}
+	else{
 		br(2); pre(4); printf("Please Enter Correct Choice"); Sleep(300);
 		goto mainmenu;
-		}
 	}
-	//orderfoood();
 	int get_food_choice;
 
 
@@ -264,13 +528,14 @@ int main(){
 		int confirm;
 
 		fflush(stdin); scanf("%d",&confirm);
-
+//Step 3
 		if(confirm == 1 ){
 
 			br(2);pre(4);    printf(" 1. Cash ");
 			br(2);pre(4);    printf(" 2. Credit ");
 			payment: ;
 			int payment;
+			
 			fflush(stdin);  scanf("%d",&payment);
 			//cash transaction
 			if(payment==1){
@@ -317,6 +582,8 @@ int main(){
 
 			}
 
+			
+			
 			///Credit Card Option
 
 			else if(payment==2){
@@ -331,7 +598,7 @@ int main(){
 					}
 					no_ofchoices--;
 				}				
-				
+			
 				for (int i=0;counter>=0;i++){
 				uquantity = individual_quantity[i]- food_quantity[i];				
 				if(uquantity<0){
@@ -348,21 +615,48 @@ int main(){
 				counter--;
 				}			
 				
-
-				int card_number[100];
-
+				// Step 1
+				// int card_number;
 				c++;
+				cardv:;
+				
+				char *input = malloc((MAX_LENGTH + 1) * sizeof(*input));
+				assert(input != NULL);
+				
+				do {
+					cls();
+					br(2);pre(4);
+					printf("Enter credit card number: ");
+					getInput(input);
+					} while (isNumeric(input) == false);
 
-				cls();middle1();pre(4); printf("Enter Your Card No : ");
-
-				fflush(stdin);   scanf("%d",&card_number[c]);
-				cardno[c] = card_number[c];
+				if (luhn(input) == false)
+				{	cls();
+					middle1();pre(4);
+					printf("invalid!! try a valid card!!");
+					//Sleep(2000);
+					free(input);
+					goto cardv;
+				}
+				else {
+					cls();
+					middle1();pre(4);					
+					cardno[c]= input;
+					printf("valid ");
+					checkPrefix(input); 				
+					
+				}
+					
 				int pin;
-				br(2);pre(2);  printf("Enter Your Card Pin [we never save your pin]  : ");
-				fflush(stdin);     scanf("%d",&pin);
+				
+				do {
+					cls();
+					br(2);pre(2);
+					printf("Enter Your Card Pin [we never save your pin]  : ");
+					getInput(input);
+					} while (isNumeric(input) == false);
+				
 				cardmoney[c] = totalprice;
-				//totalmoney += totalprice;
-					//order++;
 				
 				br(2);pre(4);  printf("Payment Success...");				
 				br(2);pre(4);    printf("1. Main Menu ");
@@ -371,8 +665,8 @@ int main(){
 
 				scanf("%d",&ps_menu2);
 
-				//if(ps_menu2==1){goto foodlist;}
-				 if(ps_menu2==1){goto mainmenu;}
+				
+				if(ps_menu2==1){goto mainmenu;}
 				else{br(2);pre(4);printf("Please Choice from list : "); goto psmenu2;}
 
 			}
@@ -417,3 +711,134 @@ int main(){
 	}
 
 }
+
+
+bool isNumeric(char *s) {
+	
+    
+	if (s == NULL){
+		br(2);pre(4); printf("please enter a valid entry");
+        return false;
+    }
+    while (*s != '\0') {
+        if (! isdigit(*s)){
+		br(2);pre(4); printf("please enter a valid entry");
+            return false;
+        }
+		s++;
+    }
+    return true;
+}
+
+
+/* 
+ * Implements Luhn's algorithm: takes a numeric string s and returns
+ * true if s represents a syntactically valid credit card number,
+ * else returns false.
+ */
+bool luhn(char *s) {
+    int sum = 0;
+    int digit, i;
+    int length = strlen(s);
+    
+    if (! (length >= MIN_LENGTH && length <= MAX_LENGTH)) 
+        return false;    
+    
+    // even length
+    if (length % 2 == 0) {
+        for (i = 0; i < length; i++) {
+            digit = s[i] - '0';
+            if (i % 2 == 0)
+                sum += addDigits(2 * digit);
+            else
+                sum += digit;
+        } 
+    }
+    // odd length
+    else {
+        for (i = 0; i < length; i++) {
+            digit = s[i] - '0';
+            if (i % 2 == 0)
+                sum += digit;
+            else
+                sum += addDigits(2 * digit);
+        } 
+    }
+
+    // sum is divisible by 10 for valid cards
+    return (sum % 10 == 0);
+}
+
+
+/* 
+ * Returns the sum of the digits of n. 
+ */
+int addDigits(int n) {
+    return (n / 10) + (n % 10);
+}
+
+
+/* 
+ * Reads a string from stdin into buffer until newline or EOF is reached
+ * (including leading and trailing whitespace), then null-terminates buffer. 
+ */ 
+void getInput(char *buffer) {
+   
+    int length = 0;                 // number of characters in buffer 
+    int capacity = MAX_LENGTH + 1;  // capacity of buffer 
+    int c;                          // character read
+    
+    while ( (c = fgetc(stdin)) != '\n' && c != EOF) {
+
+        // if input is too long, try to double the buffer capacity 
+        if (length + 1 > capacity) {
+            capacity *= 2;
+            buffer = realloc(buffer, capacity * sizeof(*buffer));
+            assert(buffer != NULL);
+        }    
+
+        // put current character in the buffer
+        buffer[length++] = c;
+    }
+    
+    // null-terminate buffer
+    buffer[length] = '\0';
+}
+
+
+/* 
+ * Checks length of the card number and its first few digits (prefix)
+ * to determine the card type. Prints the card type to stdout.
+ */
+void checkPrefix(char *s) {
+    
+    int length = strlen(s);
+
+    // Visa: 13 or 16 digits starting with 4
+    if ((length == 13 || length == 16) && s[0] == '4'){
+       br(2);pre(4); printf("Visa\n");
+	}
+
+    // Mastercard: 16 digits starting with 5
+    else if (length == 16 && s[0] == '5'){
+		br(2);pre(4);
+        printf("Mastercard\n");
+	}
+
+    // Discover: 16 digits starting with 6011
+    else if (length == 16 && s[0] == '6' && s[1] == '0' && s[2] == '1' && s[3] == '1'){
+		br(2);pre(4);
+        printf("Discover\n");
+	}
+
+    // American Express: 15 digits starting with 34 or 37
+    else if (length == 15 && s[0] == '3' && (s[1] == '4' || s[1] == '7')){
+		br(2);pre(4);
+        printf("American Express\n");
+	}
+    else {
+	br(2);pre(4);
+        printf("\nThis number is syntactically valid, but it is not a Visa, Mastercard, Discover, or American Express.\n");
+	}
+}
+
