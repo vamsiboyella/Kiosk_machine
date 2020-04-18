@@ -11,7 +11,7 @@
 
 #include<stdio.h>
 #include<stdlib.h>
-#include<conio.h>
+//#include<conio.h>
 #include<string.h>
 #include<windows.h>
 #include<time.h>
@@ -136,5 +136,53 @@ void foodlist(){
 	ccolor(26);
 
 	//  free(temp);
+
+}
+int view_orders(int order,int total_order[100],	int order_quantity[100]){
+	cls();br(2);pre(2);
+	ccolor(26);
+	printf("\n\t\t"); ccolor(240);
+	printf("______________________________________________________ "); ccolor(26);
+	printf("\n\t\t");  ccolor(240);
+	printf("|  Order No.  |   FooD Name   |  Quantity |  In Stock |"); ccolor(26);
+	printf("\n\t\t");  ccolor(240);
+	printf("------------------------------------------------------"); ccolor(26);
+	for(int o=1;o<=order;o++){
+		display_menu(total_order[o],order_quantity[o],o);
+	}
+	br(2);pre(4);  printf("1. <-- back  \n\n");pre(5);
+	int any;
+	fflush(stdin);   scanf("%d",&any);
+	return 1;
+
+}
+void display_menu(int order, int quantity, int or_no){
+
+	ccolor(26);
+
+	node *temp;
+
+	temp = list;
+
+	while(temp->data != order){
+
+		temp = temp->next;
+
+	}
+	if(temp->data == order){
+
+		ccolor(26);
+
+		printf("\n\t\t"); ccolor(62);
+		printf("|     %d      |    %s  |     %d     |     %d     |",or_no,temp->foodname,quantity,temp->quantity);
+		ccolor(26);
+		printf("\n\t\t"); ccolor(62);
+		printf("-------------------------------------------------------");
+
+		Sleep(100);
+
+	}
+
+	ccolor(26);
 
 }

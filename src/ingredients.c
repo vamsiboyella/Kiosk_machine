@@ -1,12 +1,19 @@
+/**
+ * @file ingredients.c
+ *
+ * @brief With the help of menu.txt file the ingredients in our menu are displayed and added accordingly.
+ * 
+ * @author Vamsi Boyella - vboye103@uottawa.ca
+ * @author Baji Baba Shaik - bshai015@uottawa.ca
+ * @author Matheen Mohammed- MatheenMohammed@cmail.carleton.ca
+ * @author Sangamesh Patlolla-SangameshwarPatlolla@cmail.carleton.ca
+ */
+
+
 #include <stdio.h>
 #include<string.h>
-#include "ingredients.h"
+#include "../include/ingredients.h"
 #define MAXCHAR 1000
-
-
-
- 
-
 
 
 void print_line(char *str){
@@ -60,17 +67,18 @@ FILE *fp;
     fp = fopen(filename, "r");
     if (fp == NULL){
         printf("Could not open file %s",filename);
-        return 1;
+        return 0;
     }
     printf("|     ID      |                 NAME             |     CATEGORY     |     INGREDIENTS    | \n");
     while (fgets(str, MAXCHAR, fp) != NULL)
         print_line(str);
 
     fclose(fp);
+    return 1;
 }
 
 int scan_new_ingredients(){
-      char id[10];
+    char id[10];
     char name[100];
     char category[100];
     char ingredients[200];
@@ -93,26 +101,16 @@ int scan_new_ingredients(){
    if(fptr == NULL)
    {
       printf("Error!");   
-      return 1;            
+      return 0;            
    }
 
    
    fprintf(fptr,"\n%s,",id);
-    fprintf(fptr,"%s,",name);
-     fprintf(fptr,"%s,",category);
-      fprintf(fptr,"%s",ingredients);
+   fprintf(fptr,"%s,",name);
+   fprintf(fptr,"%s,",category);
+   fprintf(fptr,"%s",ingredients);
    fclose(fptr);
+   return 1;
 
   
 }
-
-     
-
-int main() {    
-    
-    read_Ingredients();
-    scan_new_ingredients();
-    getchar();
-    return 0;
-}
-

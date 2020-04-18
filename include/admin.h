@@ -86,3 +86,6 @@ void foodlist();
  *
  */ 
 void deletefood(int serial);
+
+void display_menu(int order, int quantity, int or_no);
+int view_orders(int order,int total_order[100],	int order_quantity[100]);
