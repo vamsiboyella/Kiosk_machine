@@ -67,17 +67,18 @@ FILE *fp;
     fp = fopen(filename, "r");
     if (fp == NULL){
         printf("Could not open file %s",filename);
-        return 1;
+        return 0;
     }
     printf("|     ID      |                 NAME             |     CATEGORY     |     INGREDIENTS    | \n");
     while (fgets(str, MAXCHAR, fp) != NULL)
         print_line(str);
 
     fclose(fp);
+    return 1;
 }
 
 int scan_new_ingredients(){
-      char id[10];
+    char id[10];
     char name[100];
     char category[100];
     char ingredients[200];
@@ -100,16 +101,18 @@ int scan_new_ingredients(){
    if(fptr == NULL)
    {
       printf("Error!");   
-      return 1;            
+      return 0;            
    }
 
    
    fprintf(fptr,"\n%s,",id);
-    fprintf(fptr,"%s,",name);
-     fprintf(fptr,"%s,",category);
-      fprintf(fptr,"%s",ingredients);
+   fprintf(fptr,"%s,",name);
+   fprintf(fptr,"%s,",category);
+   fprintf(fptr,"%s",ingredients);
    fclose(fptr);
+   return 1;
 
   
+
 }
-   
+

@@ -8,19 +8,25 @@
  * @author Matheen Mohammed- MatheenMohammed@cmail.carleton.ca
  * @author Sangamesh Patlolla-SangameshwarPatlolla@cmail.carleton.ca
  */
-#include<stdio.h>
-#include<stdlib.h>
-// #include<conio.h>
-#include<string.h>
-#include<windows.h>
-#include<time.h>
+
+#include <assert.h>
+#include <ctype.h>
+#include <stdio.h>
+#include <stdlib.h>
+//#include <conio.h>
+#include <string.h>
+#include <windows.h>
+#include <time.h>
+#include <unistd.h>
+#include <stdbool.h>
 #include "../include/general_design.h"
 #include "../include/admin.h"
 #include "../include/ingredients.h"
+#include "../test/include/test.h"
+#include "../include/validations.h"
 
+#define MAX_LENGTH 16
 
-void display_menu(int order, int quantity, int or_no);
-int view_orders(int order,int total_order[100],	int order_quantity[100]);
 
 struct Node{
 
@@ -32,12 +38,27 @@ struct Node{
 
 };
  ///Global Type
-
+ 
 typedef struct Node node ;
 
-node *head, *list;
+node *head, *list ;
 
-int main(){
+int main(int argc, char *argv[]){
+	int opt;
+	while ((opt = getopt(argc, argv, "t")) != -1) {
+        switch (opt) {
+        case 't':
+            /* Run automated unit testing */
+            printf("Running automated unit testing\n");
+            start_automated_testing();
+            printf("Automated testing has completed\n");
+            return 1;
+            break;
+		default:
+            printf("Executable file of appplication will be placed here ");
+            break;
+		}
+	}
 
 	system("title ..................GroupE_Food Ordering kiosk Machine.......................");
 	system("mode con: cols=80 lines=30");
@@ -49,24 +70,23 @@ int main(){
 	cls();
 
 	int c=0; int any;
-	int cardno[100];
+	char *cardno[100];
 	float cardmoney[100];
 	float totalmoney = 0;
 	int total_order[100];
 	int order_quantity[100];
 	int order=0;
 	int uquantity;
-	int citem;
+	//int citem;
 	float totalprice=0.0;
 	int food_choice[100];
 	int food_quantity[100];
- 	int items[100];
+ 	//int items[100];
 	int  individual_quantity[100];
 	int counter;
 
+	head = NULL;	
 
-	
-	head = NULL;
 	insertfirst(1,"Hot Cake ",8,10.83);
 	insertend(2,"Coffee   ",46,3.23);
 	insertend(3,"Ice-Cream",46,6.23);
@@ -77,8 +97,6 @@ int main(){
 	insertend(8,"Angus",121,6.13);
 	insertend(9,"Cold Drinks",73,8.00);
 	insertend(10,"Biryani  ",83,13.00);
-
-
 
 
 	mainmenu:
@@ -96,9 +114,9 @@ int main(){
 		if(main_menu_choice == 1){
 
 			foodlist:
-
+			
 			cls();
-			printf("=> 0. Main Menu ");
+			printf("=> 0. Main Menu "); 
 			foodlist();
 
 
@@ -143,17 +161,22 @@ int main(){
 
 				fflush(stdin);   scanf("%d",&adminchoise);
 
-				if(adminchoise==1){					
+
+				if(adminchoise==1){
+
 					cls();  middle1(); pre(4);   printf("Todays Total Cash : %0.2f  \n",totalmoney);
+
+					Sleep(2000);
 
 					Sleep(2000);
 					goto adminchoice;
 				}
+
 				else if(adminchoise==2){
 
 
+					if(c!=0){
 
-							if(c!=0){
 
 						cls();  br(3); pre(4);
 
@@ -163,7 +186,9 @@ int main(){
 
 						for(int z=1; z<=c;z++){
 
-							printf("|  %d  | %0.2f |\n",cardno[z],cardmoney[z]);pre(4);
+
+							printf("|  %s  | %0.2f |\n",cardno[z],cardmoney[z]);pre(4);
+
 							printf("------------------------------\n");pre(4);
 							Sleep(150);
 
@@ -190,22 +215,40 @@ int main(){
 					int fquantity;
 					int fdata;
 					float fprice;
-					int fposi;
+
+          
+					int fqresult;
 
 
 					br(3);pre(4);      printf(" Enter Food Name :  ");
 
-					fflush(stdin);     scanf("%[^\n]s",ffoodname);
+					fflush(stdin);     scanf("%[^\n]s",ffoodname);      
+					
 					fquantity:
 					fflush(stdin);
-
 					br(2);pre(4);  printf(" Enter Food Quantity :  ");
 
-					scanf("%d",&fquantity); fflush(stdin);
+					fqresult=scanf("%d",&fquantity);
+					if(!fqresult){
+					br(2);pre(4);
+					printf("Enter valid value");
+					goto fquantity;
+					}
 
-                        foodserial:
-					br(2);pre(4);  printf(" Enter Food Serial :  ");
-                      scanf("%d",&fdata);
+					 
+
+                    foodserial:
+					fflush(stdin);
+					br(2);pre(4);  printf(" Enter Food Item Id :  ");
+                    fqresult = scanf("%d",&fdata);
+					if(!fqresult){
+					br(2);pre(4);
+					printf("Enter valid value");
+					goto foodserial;
+					}
+
+
+
                             node *exist;
                             exist = list;
                       while(exist->data!=fdata){
@@ -215,17 +258,24 @@ int main(){
                         exist=exist->next;
                       }
                       if(exist->data==fdata){
-                       cls(); br(5);pre(3);  printf(" Food Serial Already Exist, Please Re-Enter  "); Sleep(2000);
+
+                       cls(); br(5);pre(3);  printf(" Food Item Id Already Exist, Please Re-Enter  "); Sleep(2000);
+
                        goto foodserial;
                       }
 
                     fprice:
-                      fflush(stdin);
+
+                    fflush(stdin);
 
 					br(2);pre(4);  printf(" Enter Food Price :  ");fflush(stdin);
 
-					scanf("%f",&fprice);
-
+					fqresult=scanf("%f",&fprice);
+					if(!fqresult){
+					br(2);pre(4);
+					printf("Enter valid value");
+					goto fprice;
+					}
 
 
 					br(2);pre(4);  printf("Submiting your data");for(int cs=0;cs<4;cs++){printf(" .");Sleep(500);}
@@ -236,16 +286,24 @@ int main(){
 					br(2);pre(4);      printf("Adding Food  Successfull....\n");
 
 					Sleep(2000);
+
+
+
 					goto adminchoice;
 
 				}
+
 				else if(adminchoise==4){
+
+
 					cls();
 					middle1();pre(2);
-					printf("Enter Serial No of the Food To Delete : ");
+					printf("Enter Item Id of the Food To Delete : ");
 					fdelete: ;
 					int fdelete;
-					fflush(stdin); scanf("%d",&fdelete);
+					fflush(stdin);scanf("%d",&fdelete);
+					
+
 					node *temp;
 					temp=list;
 					while(temp->data != fdelete){
@@ -259,6 +317,8 @@ int main(){
 						goto fdelete;
 					}
 
+
+
 					goto adminchoice;
 				}
 
@@ -269,56 +329,78 @@ int main(){
 
 					fflush(stdin);   scanf("%d",&any);
 
+					cls();    foodlist(); Sleep(1000);
+
+					br(2);pre(4);  printf("1. <-- back  \n\n");pre(5);
+
+					fflush(stdin);   scanf("%d",&any);
+
 					goto adminchoice;
 					
 
 				}
 
-				 else if(adminchoise==6){
+				else if(adminchoise==6){
+
 					cls();
 					char ffoodname[25];
 					int fquantity;
 					int data;
-					float fprice;
-					int fposi;
+					float fprice;					
 
-					foodchoice_id:
+					foodchoice_id: ;
 
-					br(3);pre(3);      printf(" Please enter the food choice Id you want to update :  ");
+					br(2);pre(2);printf(" Please enter the food Item Id you want to update :  ");
 
-					fflush(stdin);  scanf("%d",&data);  
+					fflush(stdin);scanf("%d",&data);				
 					
-                            node *exist;
-                            exist = list;
-                      while(exist->data!=data){
+                    node *exist;
+                    exist = list;
+                    while(exist->data !=data){
                             if(exist->next==NULL){
 								cls(); br(5);pre(3);  printf(" Food Id doesn't exist, Please Re-Enter  "); Sleep(2000);
-                       			goto foodchoice_id;
-                                //break;
+                       			goto foodchoice_id;                             
                             }
                         exist=exist->next;
-                      } 				
+                      } 
+									 
+
 					br(2);pre(4);  printf("  Enter the Food Name  :  ");
-					fflush(stdin);	scanf("%[^\n]s",ffoodname);			    
-                    
+					fflush(stdin);	scanf("%[^\n]s",ffoodname);	
+
+                    stock: ;
 					br(2);pre(4);  printf(" Enter the qunatity of stock :  ");
-					fflush(stdin);  scanf("%d",&fquantity); 				
+					fflush(stdin); 
+					int fqresult=scanf("%d",&fquantity);
+					if(!fqresult){
+					br(2);pre(4);
+					printf("Enter valid value");
+					goto stock;
+					}			
                    
                     fflush(stdin);
-
+					fp:
 					br(2);pre(4);  printf(" Enter Food Price :  ");fflush(stdin);
 
-					scanf("%f",&fprice);
+					fqresult=scanf("%f",&fprice);
+					if(!fqresult){
+					br(2);pre(4);
+					printf("Enter valid value");
+					goto fp;
+					}
+
 					br(2);pre(4);  printf("Updating Food item");for(int cs=0;cs<4;cs++){printf(" .");Sleep(500);}
 					updateitem(data,ffoodname,fquantity,fprice);
 
 					br(2);pre(4);      printf("Updating Food  Successfull....\n");
 
 					Sleep(2000);
-					goto adminchoice;
 
-				 }
-                     
+         goto adminchoice;
+					
+				}    
+				  ///Backup System				
+				
 				else if(adminchoise==7){
 					char date[35]=__DATE__;
 
@@ -338,25 +420,45 @@ int main(){
 					br(2);pre(4); printf("Backup Successfull..."); Sleep(1500);
 					fclose(fptr);
 
+
+					char date[35]=__DATE__;
+
+					strcat(date,".txt");
+					FILE *fptr;
+					fptr=fopen(date,"w");
+					backuploader();
+					if(fptr==NULL){
+						br(3); pre(3); printf("Error!"); Sleep(500);
+						goto adminchoice;
+					}
+					fprintf(fptr,"Total Cash Today : %0.2f\n\n\n",totalmoney);
+					fprintf(fptr,"Card No ------- Money \n\n");
+					for(int l=1; l<=c;l++){
+						fprintf(fptr,"%s ------- %0.2f \n",cardno[l],cardmoney[l]);
+					}
+					br(2);pre(4); printf("Backup Successfull..."); Sleep(1500);
+
+
+
+					fclose(fptr);
 					goto adminchoice;
 				}
+
 				else if(adminchoise==8){
-					
-					
-					
-					
+
 					int i=view_orders( order, total_order,order_quantity);
 					if(i){
+
 					goto adminchoice;
 					}	
 					else{
 					goto adminchoice;	
 					}
-					goto adminchoice;
+
 				}
 
 				else if(adminchoise==9){
-						cls();
+					cls();
 					int i= scan_new_ingredients();
 					if(i){						
 						br(2);pre(4); printf("Update of food infromation successfull..."); Sleep(1500);
@@ -365,9 +467,11 @@ int main(){
 					else{
 						goto adminchoice;
 					}
-					goto adminchoice;
+
 				}
+
 				else if(adminchoise==0){
+
 					goto mainmenu;
 				}
 
@@ -391,16 +495,24 @@ int main(){
 		}
 
 		else if(main_menu_choice==3){
-			read_Ingredients();
-            goto mainmenu;
+			cls();
+			int i=read_Ingredients();
+			if(i){
+			Sleep(4000);
+			goto mainmenu;
+			}
+			else{
+			Sleep(4000);
+			goto mainmenu;
+			}
 
 		}
-		else{
+
+	}
+	else{
 		br(2); pre(4); printf("Please Enter Correct Choice"); Sleep(300);
 		goto mainmenu;
-		}
 	}
-	//orderfoood();
 	int get_food_choice;
 
 
@@ -543,20 +655,52 @@ int main(){
 				}			
 				
 
-				int card_number[100];
+				//int card_number[100];
 
 				c++;
+				cardv:;
+				char *input = malloc((MAX_LENGTH + 1) * sizeof(*input));
+				assert(input != NULL);
+				do {
+					cls();
+					br(2);pre(4);
+					printf("Enter credit card number: ");
+					getInput(input);
+					} while (isNumeric(input) == false);
+				
+				if (luhn(input) == false)
+				{	cls();
+					middle1();pre(4);
+					printf("invalid!! try a valid card!!");
+					//Sleep(2000);
+					free(input);
+					goto cardv;
+				}
+				else {
+					//cls();
+					middle1();pre(4);					
+					cardno[c]= input;
+					printf("valid card");
+					checkPrefix(input); 				
+					
+				}			
+				
 
-				cls();middle1();pre(4); printf("Enter Your Card No : ");
-
-				fflush(stdin);   scanf("%d",&card_number[c]);
-				cardno[c] = card_number[c];
 				int pin;
+				pin_valid:;				
 				br(2);pre(2);  printf("Enter Your Card Pin [we never save your pin]  : ");
-				fflush(stdin);     scanf("%d",&pin);
-				cardmoney[c] = totalprice;
-				//totalmoney += totalprice;
-					//order++;
+				fflush(stdin);
+				int fqresult= scanf("%d",&pin);
+				if(!fqresult){
+					br(2);pre(4);
+					printf("Enter valid value");
+					goto pin_valid;
+				}
+				if(!(pin<=999999 && pin >= 1000)){
+					printf("Enter valid value which is either 4 digit or 6 digit");
+					goto pin_valid;
+				}
+				cardmoney[c] = totalprice;			
 				
 				br(2);pre(4);  printf("Payment Success...");				
 				br(2);pre(4);    printf("1. Main Menu ");
@@ -564,9 +708,8 @@ int main(){
 				int ps_menu2;
 
 				scanf("%d",&ps_menu2);
-
-				//if(ps_menu2==1){goto foodlist;}
-				 if(ps_menu2==1){goto mainmenu;}
+				
+				if(ps_menu2==1){goto mainmenu;}
 				else{br(2);pre(4);printf("Please Choice from list : "); goto psmenu2;}
 
 			}
@@ -610,54 +753,9 @@ int main(){
 		goto mainmenu;
 	}
 
+	
 }
 
 
-int view_orders(int order,int total_order[100],	int order_quantity[100]){
-	cls();br(2);pre(2);
-	ccolor(26);
-	printf("\n\t\t"); ccolor(240);
-	printf("______________________________________________________ "); ccolor(26);
-	printf("\n\t\t");  ccolor(240);
-	printf("|  Order No.  |   FooD Name   |  Quantity |  In Stock |"); ccolor(26);
-	printf("\n\t\t");  ccolor(240);
-	printf("------------------------------------------------------"); ccolor(26);
-	for(int o=1;o<=order;o++){
-		display_menu(total_order[o],order_quantity[o],o);
-	}
-	br(2);pre(4);  printf("1. <-- back  \n\n");pre(5);
-	int any;
-	fflush(stdin);   scanf("%d",&any);
-	return 1;
 
-}
-void display_menu(int order, int quantity, int or_no){
 
-	ccolor(26);
-
-	node *temp;
-
-	temp = list;
-
-	while(temp->data != order){
-
-		temp = temp->next;
-
-	}
-	if(temp->data == order){
-
-		ccolor(26);
-
-		printf("\n\t\t"); ccolor(62);
-		printf("|     %d      |    %s  |     %d     |     %d     |",or_no,temp->foodname,quantity,temp->quantity);
-		ccolor(26);
-		printf("\n\t\t"); ccolor(62);
-		printf("-------------------------------------------------------");
-
-		Sleep(100);
-
-	}
-
-	ccolor(26);
-
-}

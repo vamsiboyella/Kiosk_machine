@@ -3,10 +3,11 @@
  *
  * @brief Collections of declaration function of automated unit tests..
  *
- * @author Vamsi Boyella - 
- * @author Baji Baba Shaik - 
- * @author Matheen Mohammed- 
- * @author Sangamesh Patlolla-
+
+ * @author Vamsi Boyella - vboye103@uottawa.ca
+ * @author Baji Baba Shaik - bshai015@uottawa.ca
+ * @author Matheen Mohammed- MatheenMohammed@cmail.carleton.ca
+ * @author Sangamesh Patlolla-SangameshwarPatlolla@cmail.carleton.ca
  */
 
 #ifndef TEST_H
@@ -14,7 +15,7 @@
 
 #include<stdio.h>
 #include<stdlib.h>
-// #include<conio.h>
+//#include<conio.h>
 #include<string.h>
 #include<windows.h>
 #include<time.h>
