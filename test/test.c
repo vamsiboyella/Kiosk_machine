@@ -311,9 +311,10 @@ void automated_order_pay_cancel_food(){
     insertend(5,"Burger   ",23,120.00);	
 	insertend(6,"Pizza    ",13,100.00);
     mainmenu: ;
-    int c=0; int any;
-	char *cardno[100];
-	float cardmoney[100];
+    int c=0;
+	//int any;
+	//char *cardno[100];
+	//float cardmoney[100];
 	float totalmoney = 0.0;
 	int total_order[100];
 	int order_quantity[100];
@@ -496,7 +497,7 @@ void automated_order_pay_cancel_food(){
 				else {
 					cls();
 					middle1();pre(4);					
-					cardno[c]= input;
+					//cardno[c]= input;
 					printf("valid ");
 					checkPrefix(input); 				
 					
@@ -515,7 +516,7 @@ void automated_order_pay_cancel_food(){
 					printf("Enter valid value which is either 4 digit or 6 digit");
 					goto pin_valid;
 				}
-				cardmoney[c] = totalprice;
+				//cardmoney[c] = totalprice;
 				//totalmoney += totalprice;
 					//order++;
 				

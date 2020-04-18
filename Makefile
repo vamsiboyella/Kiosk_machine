@@ -1,4 +1,4 @@
-# ------------------------------------------------
+
 # Generic Makefile
  
  # @author Vamsi Boyella - vboye103@uottawa.ca
@@ -46,5 +46,15 @@ $(OBJECTS1): $(OBJDIR)/%.o : $(SRCDIR)/%.c
 $(OBJECTS2): $(OBJDIR)/%.o : $(SRCTESTDIR)/%.c
 	@$(CC) $(CFLAGS) $(INC) -c $< -o $@
 	@echo "Compiled "$<" successfully!"
+.PHONY: clean
+clean:
+	@$(rm) $(OBJECTS1) $(OBJECTS2) $(BINDIR)/$(TARGET)	
+	@echo "Cleanup complete!"
+
+
+
+
+
+
 
 
