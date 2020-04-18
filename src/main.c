@@ -136,9 +136,9 @@ int main(int argc, char *argv[]){
 
 			if(admin_panel_choice==12345678){
 
-				node *temp;
+				// node *temp;
 
-				temp = list;
+				// temp = list;
 
 				adminchoice:
 
@@ -208,7 +208,7 @@ int main(int argc, char *argv[]){
 
 
 
-					foodadd:
+					//foodadd:
 					cls();
 
 					char ffoodname[25];
@@ -415,7 +415,7 @@ int main(int argc, char *argv[]){
 					fprintf(fptr,"Total Cash Today : %0.2f\n\n\n",totalmoney);
 					fprintf(fptr,"Card No ------- Money \n\n");
 					for(int l=1; l<=c;l++){
-						fprintf(fptr,"%d ------- %0.2f \n",cardno[l],cardmoney[l]);
+						fprintf(fptr,"%s ------- %0.2f \n",cardno[l],cardmoney[l]);
 					}
 					br(2);pre(4); printf("Backup Successfull..."); Sleep(1500);
 					fclose(fptr);
@@ -519,7 +519,7 @@ int main(int argc, char *argv[]){
 
 	if(get_food_choice == temp->data){
 		
-		fcquantity:
+		//fcquantity:
 		br(2); pre(4); printf("Enter Food Quantity : ");
 
 		int fcquantity;

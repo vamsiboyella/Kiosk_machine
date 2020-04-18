@@ -62,7 +62,7 @@ int read_Ingredients()
 FILE *fp;
 
     char str[MAXCHAR];
-    char* filename = "menu.txt";
+    char* filename = "../src/menu.txt";
  
     fp = fopen(filename, "r");
     if (fp == NULL){
@@ -96,7 +96,7 @@ int scan_new_ingredients(){
     FILE *fptr;
 
  
-   fptr = fopen("menu.txt","a");
+   fptr = fopen("../src/menu.txt","a");
 
    if(fptr == NULL)
    {

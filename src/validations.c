@@ -9,6 +9,8 @@
 #include <stdbool.h>
 #include <assert.h>
 #include "general_design.h"
+#include "validations.h"
+
 
 /* minimum and maximum credit card number lengths */
 #define MIN_LENGTH 13
@@ -16,6 +18,13 @@
 #define ENTER 13
 #define TAB 9
 #define BKSP 8
+
+/* 
+ * Returns the sum of the digits of n. 
+ */
+int addDigits(int n) {
+    return (n / 10) + (n % 10);
+}
 
 /* 
  * checks the number enterd is a digit or not. 
@@ -77,12 +86,7 @@ bool luhn(char *s) {
 }
 
 
-/* 
- * Returns the sum of the digits of n. 
- */
-int addDigits(int n) {
-    return (n / 10) + (n % 10);
-}
+
 
 
 /* 

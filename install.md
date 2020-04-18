@@ -12,6 +12,7 @@ If using Cygwin, dos2unix will be required
 
 ## Build Project:
 
+make clean 
 
 make
 
