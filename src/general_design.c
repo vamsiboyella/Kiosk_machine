@@ -15,7 +15,7 @@
 #include<string.h>
 #include<windows.h>
 #include<time.h>
-#include "general_design.h"
+#include "../include/general_design.h"
 
 
 void cls(){
@@ -123,7 +123,7 @@ void loadingbar(void){
 		printf("\n\n\n\n\n\n\n\t\t\t\t");
 		printf("%d %% Loading...\n\n\t\t",i);
 
-		printf("");
+		printf(" ");
 
 		for (int j=0; j<i;j+=2){
 
@@ -150,7 +150,7 @@ void backuploader(void){
 		printf("\n\n\n\n\n\n\n\t\t\t\t");
 		printf("%d %% Backing UP DATA...\n\n\t\t",i);
 
-		printf("");
+		printf(" ");
 
 		for (int j=0; j<i;j+=2){
 

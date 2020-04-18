@@ -43,6 +43,8 @@ void echo(char print[]);
  * @return There is no return value for this function.
  *
  */ 
+
+void main_menu();
 void br(int line);
 
 /**

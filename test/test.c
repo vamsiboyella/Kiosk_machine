@@ -3,6 +3,7 @@
  *
  * @brief Collections of declaration function of automated unit tests..
  *
+
  * @author Vamsi Boyella - vboye103@uottawa.ca
  * @author Baji Baba Shaik - bshai015@uottawa.ca
  * @author Matheen Mohammed- MatheenMohammed@cmail.carleton.ca
@@ -12,10 +13,12 @@
 #include<stdio.h>
 #include<stdlib.h>
 #include<conio.h>
+
 #include<string.h>
 #include<windows.h>
 #include<time.h>
 #include <errno.h>
+
 #include <stdbool.h>
 #include "../include/general_design.h"
 #include "../include/admin.h"
@@ -34,6 +37,7 @@
 #define ENTER 13
 #define TAB 9
 #define BKSP 8
+
 
 /**
  * Macro to print out 'passed'/'failed' based on the boolean value of what was
@@ -91,7 +95,9 @@ void automated_testing_linked_list(){
 	int fquantity;
 	int fdata;
 	float fprice;
+
 	int fqresult;
+
 
 
     head = NULL;
@@ -99,6 +105,7 @@ void automated_testing_linked_list(){
     middle1(); pre(4);printf("LINKED LIST TESTING\n");
     middle1(); pre(4);printf("-------------------\n");
     //Testing insert first function
+
     br(2); pre(4);printf("Addding items to the menu,and testing insert functions");
     br(3);pre(4);      printf(" Enter Food Name :  ");
     fflush(stdin);     scanf("%[^\n]s",ffoodname);
@@ -263,6 +270,7 @@ void automated_testing_linked_list(){
 	printf("Enter valid value");
 	goto fp;
 	}
+
     updateitem(fdata,ffoodname,fquantity,fprice);
     foodlist();
 
@@ -271,6 +279,7 @@ void automated_testing_linked_list(){
 	printf("Enter Serial No of the Food To Delete : ");
 	fdelete: ;
 	int fdelete;
+
 	fflush(stdin);
 	fqresult=scanf("%d",&fdelete);
 	if(!fqresult){
@@ -278,6 +287,7 @@ void automated_testing_linked_list(){
 	printf("Enter valid value");
 	goto fdelete;
 	}
+
 	node *temp;
 	temp=list;
     while(temp->data != fdelete){
@@ -294,6 +304,7 @@ void automated_testing_linked_list(){
 
 }
 void automated_order_pay_cancel_food(){
+
     Sleep(1000);
     cls();
     br(2); pre(3);printf(" Added burger and pizzza to the menu, to facilitate testing") ;
@@ -580,6 +591,7 @@ void automated_menu_ingredients_testing(){
 	br(2);pre(4);printf("===>Testing of reading ingredients information <===");
 	int x = read_Ingredients();
     br(2);pre(4);   ASSERT_TEST(x);
+
 
 }
 
