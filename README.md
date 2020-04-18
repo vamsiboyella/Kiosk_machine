@@ -12,7 +12,7 @@ Kiosk Machine refers to unattended self-service machines with computers that dis
 
 # Installation
 
-Installation steps are mentioned in [INSTALL.md](url)
+Installation steps are mentioned in [INSTALL.md](https://github.com/vamsiboyella/Kiosk_machine/blob/dev/install.md)
 
 # Usage
 
@@ -23,7 +23,7 @@ To run, you must first install it. Then you can follow instructions mentioned in
 
 The correct file structure (after installing GSL library should be follow and run the binary)
 
-
+```
 ├── DOCS.md 	-> Usage file
            └──  Developer_Manual.md
 		   └──  Developer_Manual.md
@@ -55,11 +55,11 @@ The correct file structure (after installing GSL library should be follow and ru
                      └──test.h
           ├──menu.text 	-> Test data
                        └── test.c
-
+```
 
 # For Developers
 
-The developer manual is available [here](url).
+The developer manual is available [here](https://github.com/vamsiboyella/Kiosk_machine/blob/dev/doc/developer_manual.md).
 
 # License
 
