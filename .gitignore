@@ -4,3 +4,5 @@ src/ingredients.exe
 
 .vscode/settings.json
 src/exefile.exe
+obj/
+bin/
