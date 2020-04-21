@@ -8,6 +8,10 @@
  * @author Matheen Mohammed- MatheenMohammed@cmail.carleton.ca
  * @author Sangamesh Patlolla-SangameshwarPatlolla@cmail.carleton.ca
  */
+ 
+#ifndef TEST_H
+#define TEST_H
+
 /**
  * @brief This function is used to create a list of menu items.
  * 
@@ -81,10 +85,36 @@ void foodlist();
  * @param[in] serial we will be giving the value for a particular value of an item to be removed from the list.
  * @details with the help of the value giving as an input we will be deleting that particular item from list when its out of stock or sold out.
  * 
- * @return Thers is no return value for this function but this helps to remove an item from the list.
+ * @return There is no return value for this function but this helps to remove an item from the list.
  *
  */ 
 void deletefood(int serial);
 
+/**
+ * @brief A Function is used to Display the menu items.
+ * 
+ * @param[in] order-- this is used to give the order number.
+ * @param[in] quantity-- This value is used to give the number of items in an order.
+ * @param[in] or_no-- This value gives the particular number of a particular order.
+ * @details With the help of these values we will be displaying all the items in the menu.
+ * 
+ * @return There is no return value for this function.
+ *
+ */ 
 void display_menu(int order, int quantity, int or_no);
+
+/**
+ * @brief This function is used to view all the orders placed.
+ * 
+ * @param[in] order-- this is used to give the order number.
+ * @param[in] total_order-- This value gives the total number of orders.
+ * @param[in] order_quantity-- This value is used to give quantity of an item in an order.
+ * @details this function is used to see the number of orders placed by customer.
+ *
+ * @return It returns the status code of a function.
+ *
+ */ 
 int view_orders(int order,int total_order[100],	int order_quantity[100]);
+
+
+#endif

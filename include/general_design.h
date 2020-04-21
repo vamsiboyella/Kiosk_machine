@@ -8,6 +8,8 @@
  * @author Matheen Mohammed- MatheenMohammed@cmail.carleton.ca
  * @author Sangamesh Patlolla-SangameshwarPatlolla@cmail.carleton.ca
  */
+#ifndef GENERAL_DESIGN_H
+#define GENERAL_DESIGN_H
 
 /**
  * @brief This function is used to clear the screen.
@@ -134,3 +136,5 @@ void middtab1(void);
  *
  */ 
 void backuploader(void);
+
+#endif

@@ -8,6 +8,9 @@
  * @author Matheen Mohammed- MatheenMohammed@cmail.carleton.ca
  * @author Sangamesh Patlolla-SangameshwarPatlolla@cmail.carleton.ca
  */
+
+#ifndef INGREDIENTS_H
+#define INGREDIENTS_H
 /**
  * @brief This function is used to read ingredients from a file.
  * 
@@ -26,3 +29,5 @@ int read_Ingredients();
  *
  */ 
 int scan_new_ingredients();
+
+#endif
