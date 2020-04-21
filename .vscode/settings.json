@@ -1,8 +1,0 @@
-{
-    "files.associations": {
-        "admin.h": "c",
-        "ingredients.h": "c",
-        "general_design.h": "c",
-        "test.h": "c"
-    }
-}
