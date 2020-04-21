@@ -1,0 +1,242 @@
+\hypertarget{general__design_8h}{}\doxysection{include/general\+\_\+design.h File Reference}
+\label{general__design_8h}\index{include/general\_design.h@{include/general\_design.h}}
+
+
+This is the main file of design module in system from which all the funtions related to design will be handled.  
+
+
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{general__design_8h_a4826277cc150ddc0f4de4bd464a34909}{cls}} ()
+\begin{DoxyCompactList}\small\item\em This function is used to clear the screen. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{general__design_8h_a182245157ae676038afc342f4efdae01}{echo}} (char print\mbox{[}$\,$\mbox{]})
+\begin{DoxyCompactList}\small\item\em This function is used to print a string. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{general__design_8h_a885611589f6294afada89fe88362e863}{main\+\_\+menu}} ()
+\begin{DoxyCompactList}\small\item\em A Function which is used to give the line spacing. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{general__design_8h_a28a40d583f8a392cefdb4b69fab1d178}\label{general__design_8h_a28a40d583f8a392cefdb4b69fab1d178}} 
+void {\bfseries br} (int line)
+\item 
+void \mbox{\hyperlink{general__design_8h_a6db9b9c1573f5ffcbe3762d34161f880}{pre}} (int tab)
+\begin{DoxyCompactList}\small\item\em This function is used to provide spacing between the characters. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{general__design_8h_ad89dde2c5c3b497489fa8c21d8dd780b}{span}} (int space)
+\begin{DoxyCompactList}\small\item\em This function is used to handle the spacing conventions in our system. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{general__design_8h_a81de7817e671329fc738e0efe1872547}{ccolor}} (int clr)
+\begin{DoxyCompactList}\small\item\em This function is used to handle the color for the welcome message in our system. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{general__design_8h_ae0ea9e74c8fad52557eb000c2a93b580}{pwellcome}} ()
+\begin{DoxyCompactList}\small\item\em This function is used to handle the welcome message of our kiosk machine. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{general__design_8h_a4923c1dda26d59f2615de8c7705222fb}{loadingbar}} ()
+\begin{DoxyCompactList}\small\item\em This function is used to handle the loading bar in our system. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{general__design_8h_a6fd4d504766f3b5865c60fca8146c315}{middle1}} (void)
+\begin{DoxyCompactList}\small\item\em This function is used to handle the line spacing. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{general__design_8h_a5751a79e4a4a79bd9bdc4ed2ccc9d339}{middtab1}} (void)
+\begin{DoxyCompactList}\small\item\em This function is used to handle the character spaces. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{general__design_8h_a57b1ad0166d745122112e27527064e57}{backuploader}} (void)
+\begin{DoxyCompactList}\small\item\em In this function the design of backup loader will be handled. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+This is the main file of design module in system from which all the funtions related to design will be handled. 
+
+\begin{DoxyAuthor}{Author}
+Vamsi Boyella -\/ \href{mailto:vboye103@uottawa.ca}{\texttt{ vboye103@uottawa.\+ca}} 
+
+Baji Baba Shaik -\/ \href{mailto:bshai015@uottawa.ca}{\texttt{ bshai015@uottawa.\+ca}} 
+
+Matheen Mohammed-\/ \href{mailto:MatheenMohammed@cmail.carleton.ca}{\texttt{ Matheen\+Mohammed@cmail.\+carleton.\+ca}} 
+
+Sangamesh \href{mailto:Patlolla-SangameshwarPatlolla@cmail.carleton.ca}{\texttt{ Patlolla-\/\+Sangameshwar\+Patlolla@cmail.\+carleton.\+ca}} 
+\end{DoxyAuthor}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{general__design_8h_a57b1ad0166d745122112e27527064e57}\label{general__design_8h_a57b1ad0166d745122112e27527064e57}} 
+\index{general\_design.h@{general\_design.h}!backuploader@{backuploader}}
+\index{backuploader@{backuploader}!general\_design.h@{general\_design.h}}
+\doxysubsubsection{\texorpdfstring{backuploader()}{backuploader()}}
+{\footnotesize\ttfamily void backuploader (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+In this function the design of backup loader will be handled. 
+
+There are no input values for this function it handles the backup loading part of the system which helps the admin to have the backup of data.
+
+\begin{DoxyReturn}{Returns}
+No return value for this function. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{general__design_8h_a81de7817e671329fc738e0efe1872547}\label{general__design_8h_a81de7817e671329fc738e0efe1872547}} 
+\index{general\_design.h@{general\_design.h}!ccolor@{ccolor}}
+\index{ccolor@{ccolor}!general\_design.h@{general\_design.h}}
+\doxysubsubsection{\texorpdfstring{ccolor()}{ccolor()}}
+{\footnotesize\ttfamily void ccolor (\begin{DoxyParamCaption}\item[{int}]{clr }\end{DoxyParamCaption})}
+
+
+
+This function is used to handle the color for the welcome message in our system. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em clr---} & we will be giving the color number to the system as input.\\
+\hline
+\end{DoxyParams}
+Based on the input provided that particular color will be assigned to the message.
+
+\begin{DoxyReturn}{Returns}
+Return value is void. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{general__design_8h_a4826277cc150ddc0f4de4bd464a34909}\label{general__design_8h_a4826277cc150ddc0f4de4bd464a34909}} 
+\index{general\_design.h@{general\_design.h}!cls@{cls}}
+\index{cls@{cls}!general\_design.h@{general\_design.h}}
+\doxysubsubsection{\texorpdfstring{cls()}{cls()}}
+{\footnotesize\ttfamily void cls (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+This function is used to clear the screen. 
+
+This is a predefined function which is used to clear the screen. This function is mainly used in the design part of the system.
+
+\begin{DoxyReturn}{Returns}
+There is no return value for this function. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{general__design_8h_a182245157ae676038afc342f4efdae01}\label{general__design_8h_a182245157ae676038afc342f4efdae01}} 
+\index{general\_design.h@{general\_design.h}!echo@{echo}}
+\index{echo@{echo}!general\_design.h@{general\_design.h}}
+\doxysubsubsection{\texorpdfstring{echo()}{echo()}}
+{\footnotesize\ttfamily void echo (\begin{DoxyParamCaption}\item[{char}]{print\mbox{[}$\,$\mbox{]} }\end{DoxyParamCaption})}
+
+
+
+This function is used to print a string. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em print\mbox{[}$\,$\mbox{]}---} & we will provide a string which we want to print.\\
+\hline
+\end{DoxyParams}
+With the help of the above input parameter it will display the output accordingly This function is used in place of Printf fucntion in our system.
+
+\begin{DoxyReturn}{Returns}
+There is no return value for this function. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{general__design_8h_a4923c1dda26d59f2615de8c7705222fb}\label{general__design_8h_a4923c1dda26d59f2615de8c7705222fb}} 
+\index{general\_design.h@{general\_design.h}!loadingbar@{loadingbar}}
+\index{loadingbar@{loadingbar}!general\_design.h@{general\_design.h}}
+\doxysubsubsection{\texorpdfstring{loadingbar()}{loadingbar()}}
+{\footnotesize\ttfamily void loadingbar (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+This function is used to handle the loading bar in our system. 
+
+There are no inputs for this function. The loading bar of our system will be managed with the help of other functions like ccolor etc.
+
+\begin{DoxyReturn}{Returns}
+Return value is void. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{general__design_8h_a885611589f6294afada89fe88362e863}\label{general__design_8h_a885611589f6294afada89fe88362e863}} 
+\index{general\_design.h@{general\_design.h}!main\_menu@{main\_menu}}
+\index{main\_menu@{main\_menu}!general\_design.h@{general\_design.h}}
+\doxysubsubsection{\texorpdfstring{main\_menu()}{main\_menu()}}
+{\footnotesize\ttfamily void main\+\_\+menu (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+A Function which is used to give the line spacing. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em line---} & user will be giving number of lines here.\\
+\hline
+\end{DoxyParams}
+With the help of this input this function will be providing the number of line spaces accordingly.
+
+\begin{DoxyReturn}{Returns}
+There is no return value for this function. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{general__design_8h_a6fd4d504766f3b5865c60fca8146c315}\label{general__design_8h_a6fd4d504766f3b5865c60fca8146c315}} 
+\index{general\_design.h@{general\_design.h}!middle1@{middle1}}
+\index{middle1@{middle1}!general\_design.h@{general\_design.h}}
+\doxysubsubsection{\texorpdfstring{middle1()}{middle1()}}
+{\footnotesize\ttfamily void middle1 (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+This function is used to handle the line spacing. 
+
+There are no input parameters for this function it directly provides 7 line spaces.
+
+\begin{DoxyReturn}{Returns}
+Return value is void. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{general__design_8h_a5751a79e4a4a79bd9bdc4ed2ccc9d339}\label{general__design_8h_a5751a79e4a4a79bd9bdc4ed2ccc9d339}} 
+\index{general\_design.h@{general\_design.h}!middtab1@{middtab1}}
+\index{middtab1@{middtab1}!general\_design.h@{general\_design.h}}
+\doxysubsubsection{\texorpdfstring{middtab1()}{middtab1()}}
+{\footnotesize\ttfamily void middtab1 (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+This function is used to handle the character spaces. 
+
+There are no input parameters for this function, it directly provides 6 character spaces.
+
+\begin{DoxyReturn}{Returns}
+There is no return value for this function. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{general__design_8h_a6db9b9c1573f5ffcbe3762d34161f880}\label{general__design_8h_a6db9b9c1573f5ffcbe3762d34161f880}} 
+\index{general\_design.h@{general\_design.h}!pre@{pre}}
+\index{pre@{pre}!general\_design.h@{general\_design.h}}
+\doxysubsubsection{\texorpdfstring{pre()}{pre()}}
+{\footnotesize\ttfamily void pre (\begin{DoxyParamCaption}\item[{int}]{tab }\end{DoxyParamCaption})}
+
+
+
+This function is used to provide spacing between the characters. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em tab---} & An input in form of number will be provided.\\
+\hline
+\end{DoxyParams}
+Based on the input provided the number of tab spaces will be provied.
+
+\begin{DoxyReturn}{Returns}
+There is no return value for the function. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{general__design_8h_ae0ea9e74c8fad52557eb000c2a93b580}\label{general__design_8h_ae0ea9e74c8fad52557eb000c2a93b580}} 
+\index{general\_design.h@{general\_design.h}!pwellcome@{pwellcome}}
+\index{pwellcome@{pwellcome}!general\_design.h@{general\_design.h}}
+\doxysubsubsection{\texorpdfstring{pwellcome()}{pwellcome()}}
+{\footnotesize\ttfamily void pwellcome (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+This function is used to handle the welcome message of our kiosk machine. 
+
+Once our kiosk machine is opened user will be given an good and handy design. The complete welcome message given to the user will be handled in this function.
+
+\begin{DoxyReturn}{Returns}
+Return value is void. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{general__design_8h_ad89dde2c5c3b497489fa8c21d8dd780b}\label{general__design_8h_ad89dde2c5c3b497489fa8c21d8dd780b}} 
+\index{general\_design.h@{general\_design.h}!span@{span}}
+\index{span@{span}!general\_design.h@{general\_design.h}}
+\doxysubsubsection{\texorpdfstring{span()}{span()}}
+{\footnotesize\ttfamily void span (\begin{DoxyParamCaption}\item[{int}]{space }\end{DoxyParamCaption})}
+
+
+
+This function is used to handle the spacing conventions in our system. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em space---} & An number will be givien as input.\\
+\hline
+\end{DoxyParams}
+Based on the input provided the number of empty spaces will be provided in our code.
+
+\begin{DoxyReturn}{Returns}
+There is no return value for this function. 
+\end{DoxyReturn}

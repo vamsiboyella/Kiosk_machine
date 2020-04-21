@@ -1,4 +1,3 @@
-
 # Generic Makefile
  
  # @author Vamsi Boyella - vboye103@uottawa.ca
@@ -50,11 +49,4 @@ $(OBJECTS2): $(OBJDIR)/%.o : $(SRCTESTDIR)/%.c
 clean:
 	@$(rm) $(OBJECTS1) $(OBJECTS2) $(BINDIR)/$(TARGET)	
 	@echo "Cleanup complete!"
-
-
-
-
-
-
-
 

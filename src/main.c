@@ -26,6 +26,7 @@
 #include "../include/validations.h"
 
 #define MAX_LENGTH 16
+void start_automated_testing();
 
 
 struct Node{

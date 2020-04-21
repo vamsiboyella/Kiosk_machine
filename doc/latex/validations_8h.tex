@@ -1,0 +1,112 @@
+\hypertarget{validations_8h}{}\doxysection{include/validations.h File Reference}
+\label{validations_8h}\index{include/validations.h@{include/validations.h}}
+
+
+This is the main file from where all the funtions will be handled by the system.  
+
+
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+bool \mbox{\hyperlink{validations_8h_a7c2299e03d8b1fa3be985c055fd42f6c}{is\+Numeric}} (char $\ast$)
+\begin{DoxyCompactList}\small\item\em This function is used to check for numeric values. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{validations_8h_ad984f62c5fb06f79fb7c880e86a3cb64}{luhn}} (char $\ast$)
+\begin{DoxyCompactList}\small\item\em This function works on an alogirthm(luhn\textquotesingle{}s). \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{validations_8h_aa5379aa8ec074f63992ba33f6953a83d}{add\+Digits}} (int)
+\begin{DoxyCompactList}\small\item\em This function is used to add digits. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{validations_8h_a5548d0676557cc4faf704ec7c870ea38}{get\+Input}} (char $\ast$)
+\begin{DoxyCompactList}\small\item\em This function is used to read input from user. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{validations_8h_a468f0bc035d7e6d8856f7e2eae1258a5}{check\+Prefix}} (char $\ast$)
+\begin{DoxyCompactList}\small\item\em This function is used to Check the prefix of credit card. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+This is the main file from where all the funtions will be handled by the system. 
+
+\begin{DoxyAuthor}{Author}
+Vamsi Boyella -\/ \href{mailto:vboye103@uottawa.ca}{\texttt{ vboye103@uottawa.\+ca}} 
+
+Baji Baba Shaik -\/ \href{mailto:bshai015@uottawa.ca}{\texttt{ bshai015@uottawa.\+ca}} 
+
+Matheen Mohammed-\/ \href{mailto:MatheenMohammed@cmail.carleton.ca}{\texttt{ Matheen\+Mohammed@cmail.\+carleton.\+ca}} 
+
+Sangamesh \href{mailto:Patlolla-SangameshwarPatlolla@cmail.carleton.ca}{\texttt{ Patlolla-\/\+Sangameshwar\+Patlolla@cmail.\+carleton.\+ca}} 
+\end{DoxyAuthor}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{validations_8h_aa5379aa8ec074f63992ba33f6953a83d}\label{validations_8h_aa5379aa8ec074f63992ba33f6953a83d}} 
+\index{validations.h@{validations.h}!addDigits@{addDigits}}
+\index{addDigits@{addDigits}!validations.h@{validations.h}}
+\doxysubsubsection{\texorpdfstring{addDigits()}{addDigits()}}
+{\footnotesize\ttfamily int add\+Digits (\begin{DoxyParamCaption}\item[{int}]{ }\end{DoxyParamCaption})}
+
+
+
+This function is used to add digits. 
+
+this function adds the digits in the form of strings.
+
+\begin{DoxyReturn}{Returns}
+Returns the sum of the digits of n. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{validations_8h_a468f0bc035d7e6d8856f7e2eae1258a5}\label{validations_8h_a468f0bc035d7e6d8856f7e2eae1258a5}} 
+\index{validations.h@{validations.h}!checkPrefix@{checkPrefix}}
+\index{checkPrefix@{checkPrefix}!validations.h@{validations.h}}
+\doxysubsubsection{\texorpdfstring{checkPrefix()}{checkPrefix()}}
+{\footnotesize\ttfamily void check\+Prefix (\begin{DoxyParamCaption}\item[{char $\ast$}]{ }\end{DoxyParamCaption})}
+
+
+
+This function is used to Check the prefix of credit card. 
+
+This function Checks length of the card number and its first few digits (prefix) to determine the card type. Prints the card type to stdout.
+
+\begin{DoxyReturn}{Returns}
+Returns the sum of the digits of n. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{validations_8h_a5548d0676557cc4faf704ec7c870ea38}\label{validations_8h_a5548d0676557cc4faf704ec7c870ea38}} 
+\index{validations.h@{validations.h}!getInput@{getInput}}
+\index{getInput@{getInput}!validations.h@{validations.h}}
+\doxysubsubsection{\texorpdfstring{getInput()}{getInput()}}
+{\footnotesize\ttfamily void get\+Input (\begin{DoxyParamCaption}\item[{char $\ast$}]{ }\end{DoxyParamCaption})}
+
+
+
+This function is used to read input from user. 
+
+this function reads a string from stdin into buffer until newline or E\+OF is reached (including leading and trailing whitespace), then null-\/terminates buffer.
+
+\begin{DoxyReturn}{Returns}
+Returns the sum of the digits of n. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{validations_8h_a7c2299e03d8b1fa3be985c055fd42f6c}\label{validations_8h_a7c2299e03d8b1fa3be985c055fd42f6c}} 
+\index{validations.h@{validations.h}!isNumeric@{isNumeric}}
+\index{isNumeric@{isNumeric}!validations.h@{validations.h}}
+\doxysubsubsection{\texorpdfstring{isNumeric()}{isNumeric()}}
+{\footnotesize\ttfamily bool is\+Numeric (\begin{DoxyParamCaption}\item[{char $\ast$}]{ }\end{DoxyParamCaption})}
+
+
+
+This function is used to check for numeric values. 
+
+This Function takes a numeric string s and returns true if every character of s.
+
+\begin{DoxyReturn}{Returns}
+Return value is an boolean value. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{validations_8h_ad984f62c5fb06f79fb7c880e86a3cb64}\label{validations_8h_ad984f62c5fb06f79fb7c880e86a3cb64}} 
+\index{validations.h@{validations.h}!luhn@{luhn}}
+\index{luhn@{luhn}!validations.h@{validations.h}}
+\doxysubsubsection{\texorpdfstring{luhn()}{luhn()}}
+{\footnotesize\ttfamily bool luhn (\begin{DoxyParamCaption}\item[{char $\ast$}]{ }\end{DoxyParamCaption})}
+
+
+
+This function works on an alogirthm(luhn\textquotesingle{}s). 
+
+This function implements Luhn\textquotesingle{}s algorithm\+: takes a numeric string s and returns true if s represents a syntactically valid credit card number,else returns false.
+
+\begin{DoxyReturn}{Returns}
+Return value is an boolean value. 
+\end{DoxyReturn}

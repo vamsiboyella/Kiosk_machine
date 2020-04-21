@@ -1,0 +1,69 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.18">
+  <compounddef id="ingredients_8h" kind="file" language="C++">
+    <compoundname>ingredients.h</compoundname>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="ingredients_8h_1acf42ce4ebe6f5efcb81de9d2573e03c2" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int read_Ingredients</definition>
+        <argsstring>()</argsstring>
+        <name>read_Ingredients</name>
+        <briefdescription>
+<para>This function is used to read ingredients from a file. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>This Function &quot;read_Ingredients&quot;is used to open the menu.txt file in read mode and display the menu ingreddients information.</para>
+<para><simplesect kind="return"><para>Return value is an integer. returns 0 if there is an error or 1 if the function is successfull. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/ingredients.h" line="22" column="5" declfile="include/ingredients.h" declline="22" declcolumn="5"/>
+      </memberdef>
+      <memberdef kind="function" id="ingredients_8h_1ae6b25bec9f18f84cef71f590beccf573" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int scan_new_ingredients</definition>
+        <argsstring>()</argsstring>
+        <name>scan_new_ingredients</name>
+        <briefdescription>
+<para>This function is used to add ingredients to a file. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>This Function is used to open the menu.txt file in append mode and add the menu ingreddients information.</para>
+<para><simplesect kind="return"><para>Return value is an integer. returns 0 if there is an error or 1 if the function is successfull. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/ingredients.h" line="31" column="5" declfile="include/ingredients.h" declline="31" declcolumn="5"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>This file is used to create functions for handling files. </para>
+    </briefdescription>
+    <detaileddescription>
+<para><simplesect kind="author"><para>Vamsi Boyella - <ulink url="mailto:vboye103@uottawa.ca">vboye103@uottawa.ca</ulink> </para>
+</simplesect>
+<simplesect kind="author"><para>Baji Baba Shaik - <ulink url="mailto:bshai015@uottawa.ca">bshai015@uottawa.ca</ulink> </para>
+</simplesect>
+<simplesect kind="author"><para>Matheen Mohammed- <ulink url="mailto:MatheenMohammed@cmail.carleton.ca">MatheenMohammed@cmail.carleton.ca</ulink> </para>
+</simplesect>
+<simplesect kind="author"><para>Sangamesh <ulink url="mailto:Patlolla-SangameshwarPatlolla@cmail.carleton.ca">Patlolla-SangameshwarPatlolla@cmail.carleton.ca</ulink> </para>
+</simplesect>
+</para>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"></codeline>
+<codeline lineno="12"><highlight class="preprocessor">#ifndef<sp/>INGREDIENTS_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>INGREDIENTS_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight></codeline>
+<codeline lineno="22" refid="ingredients_8h_1acf42ce4ebe6f5efcb81de9d2573e03c2" refkind="member"><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="ingredients_8h_1acf42ce4ebe6f5efcb81de9d2573e03c2" kindref="member">read_Ingredients</ref>();</highlight></codeline>
+<codeline lineno="31" refid="ingredients_8h_1ae6b25bec9f18f84cef71f590beccf573" refkind="member"><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="ingredients_8h_1ae6b25bec9f18f84cef71f590beccf573" kindref="member">scan_new_ingredients</ref>();</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"></highlight></codeline>
+<codeline lineno="33"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
+    </programlisting>
+    <location file="include/ingredients.h"/>
+  </compounddef>
+</doxygen>

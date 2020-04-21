@@ -1,0 +1,40 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygenindex xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="index.xsd" version="1.8.18">
+  <compound refid="admin_8h" kind="file"><name>admin.h</name>
+    <member refid="admin_8h_1a12dddd9cf76bfd894dacbd6008fd8fa3" kind="function"><name>insertfirst</name></member>
+    <member refid="admin_8h_1af4141cee38391983651d56445d650f06" kind="function"><name>updateitem</name></member>
+    <member refid="admin_8h_1a8f3e195edf5149646ca2194c5218129b" kind="function"><name>insertend</name></member>
+    <member refid="admin_8h_1adce3eb79e5302bb96e68419b1ede4e28" kind="function"><name>updatefood</name></member>
+    <member refid="admin_8h_1a443fec401dfd71a52d0dba9309d86c9b" kind="function"><name>foodlist</name></member>
+    <member refid="admin_8h_1a4c57533fc56c79d07cddd378bf1d3d1a" kind="function"><name>deletefood</name></member>
+    <member refid="admin_8h_1ab03983d990e278a0672c6c6a4c77f862" kind="function"><name>display_menu</name></member>
+    <member refid="admin_8h_1ae97e3ce6b6ca85a27af8c80fd76b400e" kind="function"><name>view_orders</name></member>
+  </compound>
+  <compound refid="general__design_8h" kind="file"><name>general_design.h</name>
+    <member refid="general__design_8h_1a4826277cc150ddc0f4de4bd464a34909" kind="function"><name>cls</name></member>
+    <member refid="general__design_8h_1a182245157ae676038afc342f4efdae01" kind="function"><name>echo</name></member>
+    <member refid="general__design_8h_1a885611589f6294afada89fe88362e863" kind="function"><name>main_menu</name></member>
+    <member refid="general__design_8h_1a28a40d583f8a392cefdb4b69fab1d178" kind="function"><name>br</name></member>
+    <member refid="general__design_8h_1a6db9b9c1573f5ffcbe3762d34161f880" kind="function"><name>pre</name></member>
+    <member refid="general__design_8h_1ad89dde2c5c3b497489fa8c21d8dd780b" kind="function"><name>span</name></member>
+    <member refid="general__design_8h_1a81de7817e671329fc738e0efe1872547" kind="function"><name>ccolor</name></member>
+    <member refid="general__design_8h_1ae0ea9e74c8fad52557eb000c2a93b580" kind="function"><name>pwellcome</name></member>
+    <member refid="general__design_8h_1a4923c1dda26d59f2615de8c7705222fb" kind="function"><name>loadingbar</name></member>
+    <member refid="general__design_8h_1a6fd4d504766f3b5865c60fca8146c315" kind="function"><name>middle1</name></member>
+    <member refid="general__design_8h_1a5751a79e4a4a79bd9bdc4ed2ccc9d339" kind="function"><name>middtab1</name></member>
+    <member refid="general__design_8h_1a57b1ad0166d745122112e27527064e57" kind="function"><name>backuploader</name></member>
+  </compound>
+  <compound refid="ingredients_8h" kind="file"><name>ingredients.h</name>
+    <member refid="ingredients_8h_1acf42ce4ebe6f5efcb81de9d2573e03c2" kind="function"><name>read_Ingredients</name></member>
+    <member refid="ingredients_8h_1ae6b25bec9f18f84cef71f590beccf573" kind="function"><name>scan_new_ingredients</name></member>
+  </compound>
+  <compound refid="validations_8h" kind="file"><name>validations.h</name>
+    <member refid="validations_8h_1a7c2299e03d8b1fa3be985c055fd42f6c" kind="function"><name>isNumeric</name></member>
+    <member refid="validations_8h_1ad984f62c5fb06f79fb7c880e86a3cb64" kind="function"><name>luhn</name></member>
+    <member refid="validations_8h_1aa5379aa8ec074f63992ba33f6953a83d" kind="function"><name>addDigits</name></member>
+    <member refid="validations_8h_1a5548d0676557cc4faf704ec7c870ea38" kind="function"><name>getInput</name></member>
+    <member refid="validations_8h_1a468f0bc035d7e6d8856f7e2eae1258a5" kind="function"><name>checkPrefix</name></member>
+  </compound>
+  <compound refid="dir_d44c64559bbebec7f509842c48db8b23" kind="dir"><name>include</name>
+  </compound>
+</doxygenindex>

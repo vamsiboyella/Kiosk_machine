@@ -1,0 +1,455 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.18">
+  <compounddef id="admin_8h" kind="file" language="C++">
+    <compoundname>admin.h</compoundname>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="admin_8h_1a12dddd9cf76bfd894dacbd6008fd8fa3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void insertfirst</definition>
+        <argsstring>(int data, char foodname[25], int quantity, float price)</argsstring>
+        <name>insertfirst</name>
+        <param>
+          <type>int</type>
+          <declname>data</declname>
+        </param>
+        <param>
+          <type>char</type>
+          <declname>foodname</declname>
+          <array>[25]</array>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>quantity</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>price</declname>
+        </param>
+        <briefdescription>
+<para>This function is used to create a list of menu items. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">data&amp;mdash;</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>This parameter is used to give the item ID. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">foodname&amp;mdash;</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>This parameter is used to give a name for an particular food item. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">quantity&amp;mdash;</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>This parameter is used to give the total number of items present in out stock. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">price&amp;mdash;</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>This parameter is used to assign the price of that item.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+With the help of the above mentioned parameters the initial items of the list are added in this function.</para>
+<para><simplesect kind="return"><para>There is no return value for this function. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/admin.h" line="28" column="6" declfile="include/admin.h" declline="28" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="admin_8h_1af4141cee38391983651d56445d650f06" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void updateitem</definition>
+        <argsstring>(int data, char foodname[25], int quantity, float price)</argsstring>
+        <name>updateitem</name>
+        <param>
+          <type>int</type>
+          <declname>data</declname>
+        </param>
+        <param>
+          <type>char</type>
+          <declname>foodname</declname>
+          <array>[25]</array>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>quantity</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>price</declname>
+        </param>
+        <briefdescription>
+<para>This function is used to update menu items information. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">data&amp;mdash;</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>This parameter is used to give the item ID. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">foodname&amp;mdash;</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>This parameter is used to give a name for an particular food item. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">quantity&amp;mdash;</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>This parameter is used to give the total number of items present in out stock. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">price&amp;mdash;</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>This parameter is used to assign the price of that item.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+Function &quot;updateitem&quot; takes input from the user and adds the items of the menu at their respective places. It can also be used to ovverride the menu.</para>
+<para><simplesect kind="return"><para>There is no return value for this function. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/admin.h" line="43" column="6" declfile="include/admin.h" declline="43" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="admin_8h_1a8f3e195edf5149646ca2194c5218129b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void insertend</definition>
+        <argsstring>(int data, char foodname[25], int quantity, float price)</argsstring>
+        <name>insertend</name>
+        <param>
+          <type>int</type>
+          <declname>data</declname>
+        </param>
+        <param>
+          <type>char</type>
+          <declname>foodname</declname>
+          <array>[25]</array>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>quantity</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>price</declname>
+        </param>
+        <briefdescription>
+<para>This function is used to add the last item in the menu. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">data&amp;mdash;</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>This parameter is used to give the item ID. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">foodname&amp;mdash;</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>This parameter is used to give a name for an particular food item. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">quantity&amp;mdash;</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>This parameter is used to give the total number of items present in out stock. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">price&amp;mdash;</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>This parameter is used to assign the price of that item.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+Function &quot;insertend&quot; takes input from the user and add the final item in the menu list.</para>
+<para><simplesect kind="return"><para>Return value is void for this function. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/admin.h" line="58" column="6" declfile="include/admin.h" declline="58" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="admin_8h_1adce3eb79e5302bb96e68419b1ede4e28" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void updatefood</definition>
+        <argsstring>(int udata, int uquantity)</argsstring>
+        <name>updatefood</name>
+        <param>
+          <type>int</type>
+          <declname>udata</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>uquantity</declname>
+        </param>
+        <briefdescription>
+<para>This Function is used to update the food menu in our system. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">udata&amp;mdash;this</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the type of item present in our menu </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">uquantity&amp;mdash;</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>This the total quantity of the food that is left in stock once an order is placed.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+with the help of the input parameters given by the owner the food details will be updated accordingly.</para>
+<para><simplesect kind="return"><para>Return value is void but it updates the items present in stock. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/admin.h" line="70" column="6" declfile="include/admin.h" declline="70" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="admin_8h_1a443fec401dfd71a52d0dba9309d86c9b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void foodlist</definition>
+        <argsstring>()</argsstring>
+        <name>foodlist</name>
+        <briefdescription>
+<para>This Function is used to display the complete food items present in our system. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>In this function we will be giving different values for different food items.</para>
+<para><simplesect kind="return"><para>Return value is void at the end of this function we will be getting the complete list of items. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/admin.h" line="80" column="6" declfile="include/admin.h" declline="80" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="admin_8h_1a4c57533fc56c79d07cddd378bf1d3d1a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void deletefood</definition>
+        <argsstring>(int serial)</argsstring>
+        <name>deletefood</name>
+        <param>
+          <type>int</type>
+          <declname>serial</declname>
+        </param>
+        <briefdescription>
+<para>A Function is used to delete the items from the list. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">serial</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>we will be giving the value for a particular value of an item to be removed from the list.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+with the help of the value giving as an input we will be deleting that particular item from list when its out of stock or sold out.</para>
+<para><simplesect kind="return"><para>There is no return value for this function but this helps to remove an item from the list. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/admin.h" line="91" column="6" declfile="include/admin.h" declline="91" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="admin_8h_1ab03983d990e278a0672c6c6a4c77f862" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void display_menu</definition>
+        <argsstring>(int order, int quantity, int or_no)</argsstring>
+        <name>display_menu</name>
+        <param>
+          <type>int</type>
+          <declname>order</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>quantity</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>or_no</declname>
+        </param>
+        <briefdescription>
+<para>A Function is used to Display the menu items. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">order&amp;ndash;</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>this is used to give the order number. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">quantity&amp;ndash;</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>This value is used to give the number of items in an order. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">or_no&amp;ndash;</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>This value gives the particular number of a particular order.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+With the help of these values we will be displaying all the items in the menu.</para>
+<para><simplesect kind="return"><para>There is no return value for this function. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/admin.h" line="104" column="6" declfile="include/admin.h" declline="104" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="admin_8h_1ae97e3ce6b6ca85a27af8c80fd76b400e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int view_orders</definition>
+        <argsstring>(int order, int total_order[100], int order_quantity[100])</argsstring>
+        <name>view_orders</name>
+        <param>
+          <type>int</type>
+          <declname>order</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>total_order</declname>
+          <array>[100]</array>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>order_quantity</declname>
+          <array>[100]</array>
+        </param>
+        <briefdescription>
+<para>This function is used to view all the orders placed. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">order&amp;ndash;</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>this is used to give the order number. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">total_order&amp;ndash;</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>This value gives the total number of orders. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">order_quantity&amp;ndash;</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>This value is used to give quantity of an item in an order.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+this function is used to see the number of orders placed by customer.</para>
+<para><simplesect kind="return"><para>It returns the status code of a function. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/admin.h" line="117" column="5" declfile="include/admin.h" declline="117" declcolumn="5"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>This is the main file from where all the funtions will be handled by the system. </para>
+    </briefdescription>
+    <detaileddescription>
+<para><simplesect kind="author"><para>Vamsi Boyella - <ulink url="mailto:vboye103@uottawa.ca">vboye103@uottawa.ca</ulink> </para>
+</simplesect>
+<simplesect kind="author"><para>Baji Baba Shaik - <ulink url="mailto:bshai015@uottawa.ca">bshai015@uottawa.ca</ulink> </para>
+</simplesect>
+<simplesect kind="author"><para>Matheen Mohammed- <ulink url="mailto:MatheenMohammed@cmail.carleton.ca">MatheenMohammed@cmail.carleton.ca</ulink> </para>
+</simplesect>
+<simplesect kind="author"><para>Sangamesh <ulink url="mailto:Patlolla-SangameshwarPatlolla@cmail.carleton.ca">Patlolla-SangameshwarPatlolla@cmail.carleton.ca</ulink> </para>
+</simplesect>
+</para>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"></codeline>
+<codeline lineno="12"><highlight class="preprocessor">#ifndef<sp/>TEST_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>TEST_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight></codeline>
+<codeline lineno="28" refid="admin_8h_1a12dddd9cf76bfd894dacbd6008fd8fa3" refkind="member"><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="admin_8h_1a12dddd9cf76bfd894dacbd6008fd8fa3" kindref="member">insertfirst</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>data,<sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>foodname[25],<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>quantity,<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>price);</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight></codeline>
+<codeline lineno="43" refid="admin_8h_1af4141cee38391983651d56445d650f06" refkind="member"><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="admin_8h_1af4141cee38391983651d56445d650f06" kindref="member">updateitem</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>data,<sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>foodname[25],<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>quantity,<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>price);</highlight></codeline>
+<codeline lineno="44"><highlight class="normal"></highlight></codeline>
+<codeline lineno="58" refid="admin_8h_1a8f3e195edf5149646ca2194c5218129b" refkind="member"><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="admin_8h_1a8f3e195edf5149646ca2194c5218129b" kindref="member">insertend</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>data,<sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>foodname[25],<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>quantity,<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>price);</highlight></codeline>
+<codeline lineno="59"><highlight class="normal"></highlight></codeline>
+<codeline lineno="70" refid="admin_8h_1adce3eb79e5302bb96e68419b1ede4e28" refkind="member"><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="admin_8h_1adce3eb79e5302bb96e68419b1ede4e28" kindref="member">updatefood</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>udata,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>uquantity);</highlight></codeline>
+<codeline lineno="71"><highlight class="normal"></highlight></codeline>
+<codeline lineno="80" refid="admin_8h_1a443fec401dfd71a52d0dba9309d86c9b" refkind="member"><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="admin_8h_1a443fec401dfd71a52d0dba9309d86c9b" kindref="member">foodlist</ref>();</highlight></codeline>
+<codeline lineno="81"><highlight class="normal"></highlight></codeline>
+<codeline lineno="91" refid="admin_8h_1a4c57533fc56c79d07cddd378bf1d3d1a" refkind="member"><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="admin_8h_1a4c57533fc56c79d07cddd378bf1d3d1a" kindref="member">deletefood</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>serial);</highlight></codeline>
+<codeline lineno="92"><highlight class="normal"></highlight></codeline>
+<codeline lineno="104" refid="admin_8h_1ab03983d990e278a0672c6c6a4c77f862" refkind="member"><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="admin_8h_1ab03983d990e278a0672c6c6a4c77f862" kindref="member">display_menu</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>order,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>quantity,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>or_no);</highlight></codeline>
+<codeline lineno="105"><highlight class="normal"></highlight></codeline>
+<codeline lineno="117" refid="admin_8h_1ae97e3ce6b6ca85a27af8c80fd76b400e" refkind="member"><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="admin_8h_1ae97e3ce6b6ca85a27af8c80fd76b400e" kindref="member">view_orders</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>order,</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>total_order[100],<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>order_quantity[100]);</highlight></codeline>
+<codeline lineno="118"><highlight class="normal"></highlight></codeline>
+<codeline lineno="119"><highlight class="normal"></highlight></codeline>
+<codeline lineno="120"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
+    </programlisting>
+    <location file="include/admin.h"/>
+  </compounddef>
+</doxygen>

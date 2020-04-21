@@ -1,0 +1,239 @@
+.TH "include/general_design.h" 3 "Tue Apr 21 2020" "Kiosk_machine" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+include/general_design.h \- This is the main file of design module in system from which all the funtions related to design will be handled\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+.SS "Functions"
+
+.in +1c
+.ti -1c
+.RI "void \fBcls\fP ()"
+.br
+.RI "This function is used to clear the screen\&. "
+.ti -1c
+.RI "void \fBecho\fP (char print[])"
+.br
+.RI "This function is used to print a string\&. "
+.ti -1c
+.RI "void \fBmain_menu\fP ()"
+.br
+.RI "A Function which is used to give the line spacing\&. "
+.ti -1c
+.RI "void \fBbr\fP (int line)"
+.br
+.ti -1c
+.RI "void \fBpre\fP (int tab)"
+.br
+.RI "This function is used to provide spacing between the characters\&. "
+.ti -1c
+.RI "void \fBspan\fP (int space)"
+.br
+.RI "This function is used to handle the spacing conventions in our system\&. "
+.ti -1c
+.RI "void \fBccolor\fP (int clr)"
+.br
+.RI "This function is used to handle the color for the welcome message in our system\&. "
+.ti -1c
+.RI "void \fBpwellcome\fP ()"
+.br
+.RI "This function is used to handle the welcome message of our kiosk machine\&. "
+.ti -1c
+.RI "void \fBloadingbar\fP ()"
+.br
+.RI "This function is used to handle the loading bar in our system\&. "
+.ti -1c
+.RI "void \fBmiddle1\fP (void)"
+.br
+.RI "This function is used to handle the line spacing\&. "
+.ti -1c
+.RI "void \fBmiddtab1\fP (void)"
+.br
+.RI "This function is used to handle the character spaces\&. "
+.ti -1c
+.RI "void \fBbackuploader\fP (void)"
+.br
+.RI "In this function the design of backup loader will be handled\&. "
+.in -1c
+.SH "Detailed Description"
+.PP 
+This is the main file of design module in system from which all the funtions related to design will be handled\&. 
+
+
+.PP
+\fBAuthor\fP
+.RS 4
+Vamsi Boyella - vboye103@uottawa.ca 
+.PP
+Baji Baba Shaik - bshai015@uottawa.ca 
+.PP
+Matheen Mohammed- MatheenMohammed@cmail.carleton.ca 
+.PP
+Sangamesh Patlolla-SangameshwarPatlolla@cmail.carleton.ca 
+.RE
+.PP
+
+.SH "Function Documentation"
+.PP 
+.SS "void backuploader (void)"
+
+.PP
+In this function the design of backup loader will be handled\&. There are no input values for this function it handles the backup loading part of the system which helps the admin to have the backup of data\&.
+.PP
+\fBReturns\fP
+.RS 4
+No return value for this function\&. 
+.RE
+.PP
+
+.SS "void ccolor (int clr)"
+
+.PP
+This function is used to handle the color for the welcome message in our system\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIclr&mdash;\fP we will be giving the color number to the system as input\&.
+.RE
+.PP
+Based on the input provided that particular color will be assigned to the message\&.
+.PP
+\fBReturns\fP
+.RS 4
+Return value is void\&. 
+.RE
+.PP
+
+.SS "void cls ()"
+
+.PP
+This function is used to clear the screen\&. This is a predefined function which is used to clear the screen\&. This function is mainly used in the design part of the system\&.
+.PP
+\fBReturns\fP
+.RS 4
+There is no return value for this function\&. 
+.RE
+.PP
+
+.SS "void echo (char print[])"
+
+.PP
+This function is used to print a string\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIprint[]&mdash;\fP we will provide a string which we want to print\&.
+.RE
+.PP
+With the help of the above input parameter it will display the output accordingly This function is used in place of Printf fucntion in our system\&.
+.PP
+\fBReturns\fP
+.RS 4
+There is no return value for this function\&. 
+.RE
+.PP
+
+.SS "void loadingbar ()"
+
+.PP
+This function is used to handle the loading bar in our system\&. There are no inputs for this function\&. The loading bar of our system will be managed with the help of other functions like ccolor etc\&.
+.PP
+\fBReturns\fP
+.RS 4
+Return value is void\&. 
+.RE
+.PP
+
+.SS "void main_menu ()"
+
+.PP
+A Function which is used to give the line spacing\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIline&mdash;\fP user will be giving number of lines here\&.
+.RE
+.PP
+With the help of this input this function will be providing the number of line spaces accordingly\&.
+.PP
+\fBReturns\fP
+.RS 4
+There is no return value for this function\&. 
+.RE
+.PP
+
+.SS "void middle1 (void)"
+
+.PP
+This function is used to handle the line spacing\&. There are no input parameters for this function it directly provides 7 line spaces\&.
+.PP
+\fBReturns\fP
+.RS 4
+Return value is void\&. 
+.RE
+.PP
+
+.SS "void middtab1 (void)"
+
+.PP
+This function is used to handle the character spaces\&. There are no input parameters for this function, it directly provides 6 character spaces\&.
+.PP
+\fBReturns\fP
+.RS 4
+There is no return value for this function\&. 
+.RE
+.PP
+
+.SS "void pre (int tab)"
+
+.PP
+This function is used to provide spacing between the characters\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fItab&mdash;\fP An input in form of number will be provided\&.
+.RE
+.PP
+Based on the input provided the number of tab spaces will be provied\&.
+.PP
+\fBReturns\fP
+.RS 4
+There is no return value for the function\&. 
+.RE
+.PP
+
+.SS "void pwellcome ()"
+
+.PP
+This function is used to handle the welcome message of our kiosk machine\&. Once our kiosk machine is opened user will be given an good and handy design\&. The complete welcome message given to the user will be handled in this function\&.
+.PP
+\fBReturns\fP
+.RS 4
+Return value is void\&. 
+.RE
+.PP
+
+.SS "void span (int space)"
+
+.PP
+This function is used to handle the spacing conventions in our system\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIspace&mdash;\fP An number will be givien as input\&.
+.RE
+.PP
+Based on the input provided the number of empty spaces will be provided in our code\&.
+.PP
+\fBReturns\fP
+.RS 4
+There is no return value for this function\&. 
+.RE
+.PP
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Kiosk_machine from the source code\&.

@@ -1,0 +1,111 @@
+.TH "include/validations.h" 3 "Tue Apr 21 2020" "Kiosk_machine" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+include/validations.h \- This is the main file from where all the funtions will be handled by the system\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+.SS "Functions"
+
+.in +1c
+.ti -1c
+.RI "bool \fBisNumeric\fP (char *)"
+.br
+.RI "This function is used to check for numeric values\&. "
+.ti -1c
+.RI "bool \fBluhn\fP (char *)"
+.br
+.RI "This function works on an alogirthm(luhn's)\&. "
+.ti -1c
+.RI "int \fBaddDigits\fP (int)"
+.br
+.RI "This function is used to add digits\&. "
+.ti -1c
+.RI "void \fBgetInput\fP (char *)"
+.br
+.RI "This function is used to read input from user\&. "
+.ti -1c
+.RI "void \fBcheckPrefix\fP (char *)"
+.br
+.RI "This function is used to Check the prefix of credit card\&. "
+.in -1c
+.SH "Detailed Description"
+.PP 
+This is the main file from where all the funtions will be handled by the system\&. 
+
+
+.PP
+\fBAuthor\fP
+.RS 4
+Vamsi Boyella - vboye103@uottawa.ca 
+.PP
+Baji Baba Shaik - bshai015@uottawa.ca 
+.PP
+Matheen Mohammed- MatheenMohammed@cmail.carleton.ca 
+.PP
+Sangamesh Patlolla-SangameshwarPatlolla@cmail.carleton.ca 
+.RE
+.PP
+
+.SH "Function Documentation"
+.PP 
+.SS "int addDigits (int)"
+
+.PP
+This function is used to add digits\&. this function adds the digits in the form of strings\&.
+.PP
+\fBReturns\fP
+.RS 4
+Returns the sum of the digits of n\&. 
+.RE
+.PP
+
+.SS "void checkPrefix (char *)"
+
+.PP
+This function is used to Check the prefix of credit card\&. This function Checks length of the card number and its first few digits (prefix) to determine the card type\&. Prints the card type to stdout\&.
+.PP
+\fBReturns\fP
+.RS 4
+Returns the sum of the digits of n\&. 
+.RE
+.PP
+
+.SS "void getInput (char *)"
+
+.PP
+This function is used to read input from user\&. this function reads a string from stdin into buffer until newline or EOF is reached (including leading and trailing whitespace), then null-terminates buffer\&.
+.PP
+\fBReturns\fP
+.RS 4
+Returns the sum of the digits of n\&. 
+.RE
+.PP
+
+.SS "bool isNumeric (char *)"
+
+.PP
+This function is used to check for numeric values\&. This Function takes a numeric string s and returns true if every character of s\&.
+.PP
+\fBReturns\fP
+.RS 4
+Return value is an boolean value\&. 
+.RE
+.PP
+
+.SS "bool luhn (char *)"
+
+.PP
+This function works on an alogirthm(luhn's)\&. This function implements Luhn's algorithm: takes a numeric string s and returns true if s represents a syntactically valid credit card number,else returns false\&.
+.PP
+\fBReturns\fP
+.RS 4
+Return value is an boolean value\&. 
+.RE
+.PP
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Kiosk_machine from the source code\&.

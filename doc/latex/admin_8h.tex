@@ -1,0 +1,226 @@
+\hypertarget{admin_8h}{}\doxysection{include/admin.h File Reference}
+\label{admin_8h}\index{include/admin.h@{include/admin.h}}
+
+
+This is the main file from where all the funtions will be handled by the system.  
+
+
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{admin_8h_a12dddd9cf76bfd894dacbd6008fd8fa3}{insertfirst}} (int data, char foodname\mbox{[}25\mbox{]}, int quantity, float price)
+\begin{DoxyCompactList}\small\item\em This function is used to create a list of menu items. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{admin_8h_af4141cee38391983651d56445d650f06}{updateitem}} (int data, char foodname\mbox{[}25\mbox{]}, int quantity, float price)
+\begin{DoxyCompactList}\small\item\em This function is used to update menu items information. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{admin_8h_a8f3e195edf5149646ca2194c5218129b}{insertend}} (int data, char foodname\mbox{[}25\mbox{]}, int quantity, float price)
+\begin{DoxyCompactList}\small\item\em This function is used to add the last item in the menu. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{admin_8h_adce3eb79e5302bb96e68419b1ede4e28}{updatefood}} (int udata, int uquantity)
+\begin{DoxyCompactList}\small\item\em This Function is used to update the food menu in our system. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{admin_8h_a443fec401dfd71a52d0dba9309d86c9b}{foodlist}} ()
+\begin{DoxyCompactList}\small\item\em This Function is used to display the complete food items present in our system. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{admin_8h_a4c57533fc56c79d07cddd378bf1d3d1a}{deletefood}} (int serial)
+\begin{DoxyCompactList}\small\item\em A Function is used to delete the items from the list. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{admin_8h_ab03983d990e278a0672c6c6a4c77f862}{display\+\_\+menu}} (int order, int quantity, int or\+\_\+no)
+\begin{DoxyCompactList}\small\item\em A Function is used to Display the menu items. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{admin_8h_ae97e3ce6b6ca85a27af8c80fd76b400e}{view\+\_\+orders}} (int order, int total\+\_\+order\mbox{[}100\mbox{]}, int order\+\_\+quantity\mbox{[}100\mbox{]})
+\begin{DoxyCompactList}\small\item\em This function is used to view all the orders placed. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+This is the main file from where all the funtions will be handled by the system. 
+
+\begin{DoxyAuthor}{Author}
+Vamsi Boyella -\/ \href{mailto:vboye103@uottawa.ca}{\texttt{ vboye103@uottawa.\+ca}} 
+
+Baji Baba Shaik -\/ \href{mailto:bshai015@uottawa.ca}{\texttt{ bshai015@uottawa.\+ca}} 
+
+Matheen Mohammed-\/ \href{mailto:MatheenMohammed@cmail.carleton.ca}{\texttt{ Matheen\+Mohammed@cmail.\+carleton.\+ca}} 
+
+Sangamesh \href{mailto:Patlolla-SangameshwarPatlolla@cmail.carleton.ca}{\texttt{ Patlolla-\/\+Sangameshwar\+Patlolla@cmail.\+carleton.\+ca}} 
+\end{DoxyAuthor}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{admin_8h_a4c57533fc56c79d07cddd378bf1d3d1a}\label{admin_8h_a4c57533fc56c79d07cddd378bf1d3d1a}} 
+\index{admin.h@{admin.h}!deletefood@{deletefood}}
+\index{deletefood@{deletefood}!admin.h@{admin.h}}
+\doxysubsubsection{\texorpdfstring{deletefood()}{deletefood()}}
+{\footnotesize\ttfamily void deletefood (\begin{DoxyParamCaption}\item[{int}]{serial }\end{DoxyParamCaption})}
+
+
+
+A Function is used to delete the items from the list. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em serial} & we will be giving the value for a particular value of an item to be removed from the list.\\
+\hline
+\end{DoxyParams}
+with the help of the value giving as an input we will be deleting that particular item from list when its out of stock or sold out.
+
+\begin{DoxyReturn}{Returns}
+There is no return value for this function but this helps to remove an item from the list. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{admin_8h_ab03983d990e278a0672c6c6a4c77f862}\label{admin_8h_ab03983d990e278a0672c6c6a4c77f862}} 
+\index{admin.h@{admin.h}!display\_menu@{display\_menu}}
+\index{display\_menu@{display\_menu}!admin.h@{admin.h}}
+\doxysubsubsection{\texorpdfstring{display\_menu()}{display\_menu()}}
+{\footnotesize\ttfamily void display\+\_\+menu (\begin{DoxyParamCaption}\item[{int}]{order,  }\item[{int}]{quantity,  }\item[{int}]{or\+\_\+no }\end{DoxyParamCaption})}
+
+
+
+A Function is used to Display the menu items. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em order--} & this is used to give the order number. \\
+\hline
+\mbox{\texttt{ in}}  & {\em quantity--} & This value is used to give the number of items in an order. \\
+\hline
+\mbox{\texttt{ in}}  & {\em or\+\_\+no--} & This value gives the particular number of a particular order.\\
+\hline
+\end{DoxyParams}
+With the help of these values we will be displaying all the items in the menu.
+
+\begin{DoxyReturn}{Returns}
+There is no return value for this function. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{admin_8h_a443fec401dfd71a52d0dba9309d86c9b}\label{admin_8h_a443fec401dfd71a52d0dba9309d86c9b}} 
+\index{admin.h@{admin.h}!foodlist@{foodlist}}
+\index{foodlist@{foodlist}!admin.h@{admin.h}}
+\doxysubsubsection{\texorpdfstring{foodlist()}{foodlist()}}
+{\footnotesize\ttfamily void foodlist (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+This Function is used to display the complete food items present in our system. 
+
+In this function we will be giving different values for different food items.
+
+\begin{DoxyReturn}{Returns}
+Return value is void at the end of this function we will be getting the complete list of items. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{admin_8h_a8f3e195edf5149646ca2194c5218129b}\label{admin_8h_a8f3e195edf5149646ca2194c5218129b}} 
+\index{admin.h@{admin.h}!insertend@{insertend}}
+\index{insertend@{insertend}!admin.h@{admin.h}}
+\doxysubsubsection{\texorpdfstring{insertend()}{insertend()}}
+{\footnotesize\ttfamily void insertend (\begin{DoxyParamCaption}\item[{int}]{data,  }\item[{char}]{foodname\mbox{[}25\mbox{]},  }\item[{int}]{quantity,  }\item[{float}]{price }\end{DoxyParamCaption})}
+
+
+
+This function is used to add the last item in the menu. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em data---} & This parameter is used to give the item ID. \\
+\hline
+\mbox{\texttt{ in}}  & {\em foodname---} & This parameter is used to give a name for an particular food item. \\
+\hline
+\mbox{\texttt{ in}}  & {\em quantity---} & This parameter is used to give the total number of items present in out stock. \\
+\hline
+\mbox{\texttt{ in}}  & {\em price---} & This parameter is used to assign the price of that item.\\
+\hline
+\end{DoxyParams}
+Function \char`\"{}insertend\char`\"{} takes input from the user and add the final item in the menu list.
+
+\begin{DoxyReturn}{Returns}
+Return value is void for this function. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{admin_8h_a12dddd9cf76bfd894dacbd6008fd8fa3}\label{admin_8h_a12dddd9cf76bfd894dacbd6008fd8fa3}} 
+\index{admin.h@{admin.h}!insertfirst@{insertfirst}}
+\index{insertfirst@{insertfirst}!admin.h@{admin.h}}
+\doxysubsubsection{\texorpdfstring{insertfirst()}{insertfirst()}}
+{\footnotesize\ttfamily void insertfirst (\begin{DoxyParamCaption}\item[{int}]{data,  }\item[{char}]{foodname\mbox{[}25\mbox{]},  }\item[{int}]{quantity,  }\item[{float}]{price }\end{DoxyParamCaption})}
+
+
+
+This function is used to create a list of menu items. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em data---} & This parameter is used to give the item ID. \\
+\hline
+\mbox{\texttt{ in}}  & {\em foodname---} & This parameter is used to give a name for an particular food item. \\
+\hline
+\mbox{\texttt{ in}}  & {\em quantity---} & This parameter is used to give the total number of items present in out stock. \\
+\hline
+\mbox{\texttt{ in}}  & {\em price---} & This parameter is used to assign the price of that item.\\
+\hline
+\end{DoxyParams}
+With the help of the above mentioned parameters the initial items of the list are added in this function.
+
+\begin{DoxyReturn}{Returns}
+There is no return value for this function. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{admin_8h_adce3eb79e5302bb96e68419b1ede4e28}\label{admin_8h_adce3eb79e5302bb96e68419b1ede4e28}} 
+\index{admin.h@{admin.h}!updatefood@{updatefood}}
+\index{updatefood@{updatefood}!admin.h@{admin.h}}
+\doxysubsubsection{\texorpdfstring{updatefood()}{updatefood()}}
+{\footnotesize\ttfamily void updatefood (\begin{DoxyParamCaption}\item[{int}]{udata,  }\item[{int}]{uquantity }\end{DoxyParamCaption})}
+
+
+
+This Function is used to update the food menu in our system. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em udata---this} & the type of item present in our menu \\
+\hline
+\mbox{\texttt{ in}}  & {\em uquantity---} & This the total quantity of the food that is left in stock once an order is placed.\\
+\hline
+\end{DoxyParams}
+with the help of the input parameters given by the owner the food details will be updated accordingly.
+
+\begin{DoxyReturn}{Returns}
+Return value is void but it updates the items present in stock. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{admin_8h_af4141cee38391983651d56445d650f06}\label{admin_8h_af4141cee38391983651d56445d650f06}} 
+\index{admin.h@{admin.h}!updateitem@{updateitem}}
+\index{updateitem@{updateitem}!admin.h@{admin.h}}
+\doxysubsubsection{\texorpdfstring{updateitem()}{updateitem()}}
+{\footnotesize\ttfamily void updateitem (\begin{DoxyParamCaption}\item[{int}]{data,  }\item[{char}]{foodname\mbox{[}25\mbox{]},  }\item[{int}]{quantity,  }\item[{float}]{price }\end{DoxyParamCaption})}
+
+
+
+This function is used to update menu items information. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em data---} & This parameter is used to give the item ID. \\
+\hline
+\mbox{\texttt{ in}}  & {\em foodname---} & This parameter is used to give a name for an particular food item. \\
+\hline
+\mbox{\texttt{ in}}  & {\em quantity---} & This parameter is used to give the total number of items present in out stock. \\
+\hline
+\mbox{\texttt{ in}}  & {\em price---} & This parameter is used to assign the price of that item.\\
+\hline
+\end{DoxyParams}
+Function \char`\"{}updateitem\char`\"{} takes input from the user and adds the items of the menu at their respective places. It can also be used to ovverride the menu.
+
+\begin{DoxyReturn}{Returns}
+There is no return value for this function. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{admin_8h_ae97e3ce6b6ca85a27af8c80fd76b400e}\label{admin_8h_ae97e3ce6b6ca85a27af8c80fd76b400e}} 
+\index{admin.h@{admin.h}!view\_orders@{view\_orders}}
+\index{view\_orders@{view\_orders}!admin.h@{admin.h}}
+\doxysubsubsection{\texorpdfstring{view\_orders()}{view\_orders()}}
+{\footnotesize\ttfamily int view\+\_\+orders (\begin{DoxyParamCaption}\item[{int}]{order,  }\item[{int}]{total\+\_\+order\mbox{[}100\mbox{]},  }\item[{int}]{order\+\_\+quantity\mbox{[}100\mbox{]} }\end{DoxyParamCaption})}
+
+
+
+This function is used to view all the orders placed. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em order--} & this is used to give the order number. \\
+\hline
+\mbox{\texttt{ in}}  & {\em total\+\_\+order--} & This value gives the total number of orders. \\
+\hline
+\mbox{\texttt{ in}}  & {\em order\+\_\+quantity--} & This value is used to give quantity of an item in an order.\\
+\hline
+\end{DoxyParams}
+this function is used to see the number of orders placed by customer.
+
+\begin{DoxyReturn}{Returns}
+It returns the status code of a function. 
+\end{DoxyReturn}

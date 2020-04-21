@@ -1,0 +1,339 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.18">
+  <compounddef id="general__design_8h" kind="file" language="C++">
+    <compoundname>general_design.h</compoundname>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="general__design_8h_1a4826277cc150ddc0f4de4bd464a34909" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void cls</definition>
+        <argsstring>()</argsstring>
+        <name>cls</name>
+        <briefdescription>
+<para>This function is used to clear the screen. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>This is a predefined function which is used to clear the screen. This function is mainly used in the design part of the system.</para>
+<para><simplesect kind="return"><para>There is no return value for this function. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/general_design.h" line="23" column="6" declfile="include/general_design.h" declline="23" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="general__design_8h_1a182245157ae676038afc342f4efdae01" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void echo</definition>
+        <argsstring>(char print[])</argsstring>
+        <name>echo</name>
+        <param>
+          <type>char</type>
+          <declname>print</declname>
+          <array>[]</array>
+        </param>
+        <briefdescription>
+<para>This function is used to print a string. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">print[]&amp;mdash;</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>we will provide a string which we want to print.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+With the help of the above input parameter it will display the output accordingly This function is used in place of Printf fucntion in our system.</para>
+<para><simplesect kind="return"><para>There is no return value for this function. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/general_design.h" line="36" column="6" declfile="include/general_design.h" declline="36" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="general__design_8h_1a885611589f6294afada89fe88362e863" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void main_menu</definition>
+        <argsstring>()</argsstring>
+        <name>main_menu</name>
+        <briefdescription>
+<para>A Function which is used to give the line spacing. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">line&amp;mdash;</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>user will be giving number of lines here.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+With the help of this input this function will be providing the number of line spaces accordingly.</para>
+<para><simplesect kind="return"><para>There is no return value for this function. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/general_design.h" line="49" column="6" declfile="include/general_design.h" declline="49" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="general__design_8h_1a28a40d583f8a392cefdb4b69fab1d178" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void br</definition>
+        <argsstring>(int line)</argsstring>
+        <name>br</name>
+        <param>
+          <type>int</type>
+          <declname>line</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/general_design.h" line="50" column="6" declfile="include/general_design.h" declline="50" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="general__design_8h_1a6db9b9c1573f5ffcbe3762d34161f880" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void pre</definition>
+        <argsstring>(int tab)</argsstring>
+        <name>pre</name>
+        <param>
+          <type>int</type>
+          <declname>tab</declname>
+        </param>
+        <briefdescription>
+<para>This function is used to provide spacing between the characters. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">tab&amp;mdash;</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>An input in form of number will be provided.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+Based on the input provided the number of tab spaces will be provied.</para>
+<para><simplesect kind="return"><para>There is no return value for the function. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/general_design.h" line="62" column="6" declfile="include/general_design.h" declline="62" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="general__design_8h_1ad89dde2c5c3b497489fa8c21d8dd780b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void span</definition>
+        <argsstring>(int space)</argsstring>
+        <name>span</name>
+        <param>
+          <type>int</type>
+          <declname>space</declname>
+        </param>
+        <briefdescription>
+<para>This function is used to handle the spacing conventions in our system. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">space&amp;mdash;</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>An number will be givien as input.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+Based on the input provided the number of empty spaces will be provided in our code.</para>
+<para><simplesect kind="return"><para>There is no return value for this function. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/general_design.h" line="74" column="6" declfile="include/general_design.h" declline="74" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="general__design_8h_1a81de7817e671329fc738e0efe1872547" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void ccolor</definition>
+        <argsstring>(int clr)</argsstring>
+        <name>ccolor</name>
+        <param>
+          <type>int</type>
+          <declname>clr</declname>
+        </param>
+        <briefdescription>
+<para>This function is used to handle the color for the welcome message in our system. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">clr&amp;mdash;</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>we will be giving the color number to the system as input.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+Based on the input provided that particular color will be assigned to the message.</para>
+<para><simplesect kind="return"><para>Return value is void. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/general_design.h" line="86" column="6" declfile="include/general_design.h" declline="86" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="general__design_8h_1ae0ea9e74c8fad52557eb000c2a93b580" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void pwellcome</definition>
+        <argsstring>()</argsstring>
+        <name>pwellcome</name>
+        <briefdescription>
+<para>This function is used to handle the welcome message of our kiosk machine. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Once our kiosk machine is opened user will be given an good and handy design. The complete welcome message given to the user will be handled in this function.</para>
+<para><simplesect kind="return"><para>Return value is void. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/general_design.h" line="97" column="6" declfile="include/general_design.h" declline="97" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="general__design_8h_1a4923c1dda26d59f2615de8c7705222fb" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void loadingbar</definition>
+        <argsstring>()</argsstring>
+        <name>loadingbar</name>
+        <briefdescription>
+<para>This function is used to handle the loading bar in our system. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>There are no inputs for this function. The loading bar of our system will be managed with the help of other functions like ccolor etc.</para>
+<para><simplesect kind="return"><para>Return value is void. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/general_design.h" line="108" column="6" declfile="include/general_design.h" declline="108" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="general__design_8h_1a6fd4d504766f3b5865c60fca8146c315" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void middle1</definition>
+        <argsstring>(void)</argsstring>
+        <name>middle1</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+<para>This function is used to handle the line spacing. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>There are no input parameters for this function it directly provides 7 line spaces.</para>
+<para><simplesect kind="return"><para>Return value is void. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/general_design.h" line="118" column="6" declfile="include/general_design.h" declline="118" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="general__design_8h_1a5751a79e4a4a79bd9bdc4ed2ccc9d339" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void middtab1</definition>
+        <argsstring>(void)</argsstring>
+        <name>middtab1</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+<para>This function is used to handle the character spaces. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>There are no input parameters for this function, it directly provides 6 character spaces.</para>
+<para><simplesect kind="return"><para>There is no return value for this function. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/general_design.h" line="128" column="6" declfile="include/general_design.h" declline="128" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="general__design_8h_1a57b1ad0166d745122112e27527064e57" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void backuploader</definition>
+        <argsstring>(void)</argsstring>
+        <name>backuploader</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+<para>In this function the design of backup loader will be handled. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>There are no input values for this function it handles the backup loading part of the system which helps the admin to have the backup of data.</para>
+<para><simplesect kind="return"><para>No return value for this function. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/general_design.h" line="138" column="6" declfile="include/general_design.h" declline="138" declcolumn="6"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>This is the main file of design module in system from which all the funtions related to design will be handled. </para>
+    </briefdescription>
+    <detaileddescription>
+<para><simplesect kind="author"><para>Vamsi Boyella - <ulink url="mailto:vboye103@uottawa.ca">vboye103@uottawa.ca</ulink> </para>
+</simplesect>
+<simplesect kind="author"><para>Baji Baba Shaik - <ulink url="mailto:bshai015@uottawa.ca">bshai015@uottawa.ca</ulink> </para>
+</simplesect>
+<simplesect kind="author"><para>Matheen Mohammed- <ulink url="mailto:MatheenMohammed@cmail.carleton.ca">MatheenMohammed@cmail.carleton.ca</ulink> </para>
+</simplesect>
+<simplesect kind="author"><para>Sangamesh <ulink url="mailto:Patlolla-SangameshwarPatlolla@cmail.carleton.ca">Patlolla-SangameshwarPatlolla@cmail.carleton.ca</ulink> </para>
+</simplesect>
+</para>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"></codeline>
+<codeline lineno="11"><highlight class="preprocessor">#ifndef<sp/>GENERAL_DESIGN_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>GENERAL_DESIGN_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight></codeline>
+<codeline lineno="23" refid="general__design_8h_1a4826277cc150ddc0f4de4bd464a34909" refkind="member"><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="general__design_8h_1a4826277cc150ddc0f4de4bd464a34909" kindref="member">cls</ref>();</highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight></codeline>
+<codeline lineno="36" refid="general__design_8h_1a182245157ae676038afc342f4efdae01" refkind="member"><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="general__design_8h_1a182245157ae676038afc342f4efdae01" kindref="member">echo</ref>(</highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>print[]);</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"></highlight></codeline>
+<codeline lineno="49" refid="general__design_8h_1a885611589f6294afada89fe88362e863" refkind="member"><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="general__design_8h_1a885611589f6294afada89fe88362e863" kindref="member">main_menu</ref>();</highlight></codeline>
+<codeline lineno="50"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>br(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>line);</highlight></codeline>
+<codeline lineno="51"><highlight class="normal"></highlight></codeline>
+<codeline lineno="62" refid="general__design_8h_1a6db9b9c1573f5ffcbe3762d34161f880" refkind="member"><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="general__design_8h_1a6db9b9c1573f5ffcbe3762d34161f880" kindref="member">pre</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>tab);</highlight></codeline>
+<codeline lineno="63"><highlight class="normal"></highlight></codeline>
+<codeline lineno="74" refid="general__design_8h_1ad89dde2c5c3b497489fa8c21d8dd780b" refkind="member"><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="general__design_8h_1ad89dde2c5c3b497489fa8c21d8dd780b" kindref="member">span</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>space);</highlight></codeline>
+<codeline lineno="75"><highlight class="normal"></highlight></codeline>
+<codeline lineno="86" refid="general__design_8h_1a81de7817e671329fc738e0efe1872547" refkind="member"><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="general__design_8h_1a81de7817e671329fc738e0efe1872547" kindref="member">ccolor</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>clr);</highlight></codeline>
+<codeline lineno="87"><highlight class="normal"></highlight></codeline>
+<codeline lineno="97" refid="general__design_8h_1ae0ea9e74c8fad52557eb000c2a93b580" refkind="member"><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="general__design_8h_1ae0ea9e74c8fad52557eb000c2a93b580" kindref="member">pwellcome</ref>();</highlight></codeline>
+<codeline lineno="98"><highlight class="normal"></highlight></codeline>
+<codeline lineno="108" refid="general__design_8h_1a4923c1dda26d59f2615de8c7705222fb" refkind="member"><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="general__design_8h_1a4923c1dda26d59f2615de8c7705222fb" kindref="member">loadingbar</ref>();</highlight></codeline>
+<codeline lineno="109"><highlight class="normal"></highlight></codeline>
+<codeline lineno="118" refid="general__design_8h_1a6fd4d504766f3b5865c60fca8146c315" refkind="member"><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="general__design_8h_1a6fd4d504766f3b5865c60fca8146c315" kindref="member">middle1</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="119"><highlight class="normal"></highlight></codeline>
+<codeline lineno="128" refid="general__design_8h_1a5751a79e4a4a79bd9bdc4ed2ccc9d339" refkind="member"><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="general__design_8h_1a5751a79e4a4a79bd9bdc4ed2ccc9d339" kindref="member">middtab1</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="129"><highlight class="normal"></highlight></codeline>
+<codeline lineno="138" refid="general__design_8h_1a57b1ad0166d745122112e27527064e57" refkind="member"><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="general__design_8h_1a57b1ad0166d745122112e27527064e57" kindref="member">backuploader</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="139"><highlight class="normal"></highlight></codeline>
+<codeline lineno="140"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
+    </programlisting>
+    <location file="include/general_design.h"/>
+  </compounddef>
+</doxygen>

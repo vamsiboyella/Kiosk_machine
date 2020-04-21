@@ -1,0 +1,233 @@
+.TH "include/admin.h" 3 "Tue Apr 21 2020" "Kiosk_machine" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+include/admin.h \- This is the main file from where all the funtions will be handled by the system\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+.SS "Functions"
+
+.in +1c
+.ti -1c
+.RI "void \fBinsertfirst\fP (int data, char foodname[25], int quantity, float price)"
+.br
+.RI "This function is used to create a list of menu items\&. "
+.ti -1c
+.RI "void \fBupdateitem\fP (int data, char foodname[25], int quantity, float price)"
+.br
+.RI "This function is used to update menu items information\&. "
+.ti -1c
+.RI "void \fBinsertend\fP (int data, char foodname[25], int quantity, float price)"
+.br
+.RI "This function is used to add the last item in the menu\&. "
+.ti -1c
+.RI "void \fBupdatefood\fP (int udata, int uquantity)"
+.br
+.RI "This Function is used to update the food menu in our system\&. "
+.ti -1c
+.RI "void \fBfoodlist\fP ()"
+.br
+.RI "This Function is used to display the complete food items present in our system\&. "
+.ti -1c
+.RI "void \fBdeletefood\fP (int serial)"
+.br
+.RI "A Function is used to delete the items from the list\&. "
+.ti -1c
+.RI "void \fBdisplay_menu\fP (int order, int quantity, int or_no)"
+.br
+.RI "A Function is used to Display the menu items\&. "
+.ti -1c
+.RI "int \fBview_orders\fP (int order, int total_order[100], int order_quantity[100])"
+.br
+.RI "This function is used to view all the orders placed\&. "
+.in -1c
+.SH "Detailed Description"
+.PP 
+This is the main file from where all the funtions will be handled by the system\&. 
+
+
+.PP
+\fBAuthor\fP
+.RS 4
+Vamsi Boyella - vboye103@uottawa.ca 
+.PP
+Baji Baba Shaik - bshai015@uottawa.ca 
+.PP
+Matheen Mohammed- MatheenMohammed@cmail.carleton.ca 
+.PP
+Sangamesh Patlolla-SangameshwarPatlolla@cmail.carleton.ca 
+.RE
+.PP
+
+.SH "Function Documentation"
+.PP 
+.SS "void deletefood (int serial)"
+
+.PP
+A Function is used to delete the items from the list\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIserial\fP we will be giving the value for a particular value of an item to be removed from the list\&.
+.RE
+.PP
+with the help of the value giving as an input we will be deleting that particular item from list when its out of stock or sold out\&.
+.PP
+\fBReturns\fP
+.RS 4
+There is no return value for this function but this helps to remove an item from the list\&. 
+.RE
+.PP
+
+.SS "void display_menu (int order, int quantity, int or_no)"
+
+.PP
+A Function is used to Display the menu items\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIorder&ndash;\fP this is used to give the order number\&. 
+.br
+\fIquantity&ndash;\fP This value is used to give the number of items in an order\&. 
+.br
+\fIor_no&ndash;\fP This value gives the particular number of a particular order\&.
+.RE
+.PP
+With the help of these values we will be displaying all the items in the menu\&.
+.PP
+\fBReturns\fP
+.RS 4
+There is no return value for this function\&. 
+.RE
+.PP
+
+.SS "void foodlist ()"
+
+.PP
+This Function is used to display the complete food items present in our system\&. In this function we will be giving different values for different food items\&.
+.PP
+\fBReturns\fP
+.RS 4
+Return value is void at the end of this function we will be getting the complete list of items\&. 
+.RE
+.PP
+
+.SS "void insertend (int data, char foodname[25], int quantity, float price)"
+
+.PP
+This function is used to add the last item in the menu\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIdata&mdash;\fP This parameter is used to give the item ID\&. 
+.br
+\fIfoodname&mdash;\fP This parameter is used to give a name for an particular food item\&. 
+.br
+\fIquantity&mdash;\fP This parameter is used to give the total number of items present in out stock\&. 
+.br
+\fIprice&mdash;\fP This parameter is used to assign the price of that item\&.
+.RE
+.PP
+Function 'insertend' takes input from the user and add the final item in the menu list\&.
+.PP
+\fBReturns\fP
+.RS 4
+Return value is void for this function\&. 
+.RE
+.PP
+
+.SS "void insertfirst (int data, char foodname[25], int quantity, float price)"
+
+.PP
+This function is used to create a list of menu items\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIdata&mdash;\fP This parameter is used to give the item ID\&. 
+.br
+\fIfoodname&mdash;\fP This parameter is used to give a name for an particular food item\&. 
+.br
+\fIquantity&mdash;\fP This parameter is used to give the total number of items present in out stock\&. 
+.br
+\fIprice&mdash;\fP This parameter is used to assign the price of that item\&.
+.RE
+.PP
+With the help of the above mentioned parameters the initial items of the list are added in this function\&.
+.PP
+\fBReturns\fP
+.RS 4
+There is no return value for this function\&. 
+.RE
+.PP
+
+.SS "void updatefood (int udata, int uquantity)"
+
+.PP
+This Function is used to update the food menu in our system\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIudata&mdash;this\fP the type of item present in our menu 
+.br
+\fIuquantity&mdash;\fP This the total quantity of the food that is left in stock once an order is placed\&.
+.RE
+.PP
+with the help of the input parameters given by the owner the food details will be updated accordingly\&.
+.PP
+\fBReturns\fP
+.RS 4
+Return value is void but it updates the items present in stock\&. 
+.RE
+.PP
+
+.SS "void updateitem (int data, char foodname[25], int quantity, float price)"
+
+.PP
+This function is used to update menu items information\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIdata&mdash;\fP This parameter is used to give the item ID\&. 
+.br
+\fIfoodname&mdash;\fP This parameter is used to give a name for an particular food item\&. 
+.br
+\fIquantity&mdash;\fP This parameter is used to give the total number of items present in out stock\&. 
+.br
+\fIprice&mdash;\fP This parameter is used to assign the price of that item\&.
+.RE
+.PP
+Function 'updateitem' takes input from the user and adds the items of the menu at their respective places\&. It can also be used to ovverride the menu\&.
+.PP
+\fBReturns\fP
+.RS 4
+There is no return value for this function\&. 
+.RE
+.PP
+
+.SS "int view_orders (int order, int total_order[100], int order_quantity[100])"
+
+.PP
+This function is used to view all the orders placed\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIorder&ndash;\fP this is used to give the order number\&. 
+.br
+\fItotal_order&ndash;\fP This value gives the total number of orders\&. 
+.br
+\fIorder_quantity&ndash;\fP This value is used to give quantity of an item in an order\&.
+.RE
+.PP
+this function is used to see the number of orders placed by customer\&.
+.PP
+\fBReturns\fP
+.RS 4
+It returns the status code of a function\&. 
+.RE
+.PP
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Kiosk_machine from the source code\&.
