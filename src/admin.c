@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 /**
  * @file admin.c
  *
@@ -248,4 +246,3 @@ void display_menu(int order, int quantity, int or_no){
 	ccolor(26);
 
 }
->>>>>>> dev
