@@ -1,4 +1,4 @@
-/**
+/*
  * @file test.h
  *
  * @brief Collections of declaration function of automated unit tests..
@@ -15,20 +15,21 @@
 
 #include<stdio.h>
 #include<stdlib.h>
-//#include<conio.h>
+
 #include<string.h>
 #include<windows.h>
 #include<time.h>
 #include <errno.h>
-#include "general_design.h"
-#include "admin.h"
-#include "ingredients.h"
+#include "../include/general_design.h"
+#include "../include/admin.h"
+#include "../include/ingredients.h"
 
-/**
+/*
  * @brief Starts automated testing
  *
  * @details Entry point into the automated test script
  */
+
 void start_automated_testing(void);
 
 /**
@@ -68,20 +69,6 @@ void automated_menu_ingredients_testing(void);
  * 
  */
 void automated_order_pay_cancel_food(void);
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
