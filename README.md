@@ -63,7 +63,7 @@ The developer manual is available [here](https://github.com/vamsiboyella/Kiosk_m
 
 # License
 
-This project is licensed under the GPL 2.0 License - see the LICENSE.md file for details
+This project is licensed under the GPL 3.0 License - see the [LICENSE.md](https://github.com/vamsiboyella/Kiosk_machine/blob/master/LICENSE) file for details
 
 # Acknowledgements
 
