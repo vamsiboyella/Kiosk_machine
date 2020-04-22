@@ -276,7 +276,7 @@ void automated_testing_linked_list(){
 
     //Testing delete food function
     middle1();pre(2);
-	printf("Enter Serial No of the Food To Delete : ");
+	printf("Enter Food ItemID  To Delete : ");
 	fdelete: ;
 	int fdelete;
 
@@ -585,8 +585,9 @@ void automated_order_pay_cancel_food(){
 }
 void automated_menu_ingredients_testing(){
     Sleep(1000);
-    cls();
+   // cls();
     br(2);pre(4);printf("===>Testing of updating ingredients information <===");
+	br(2);pre(4);
     int y= scan_new_ingredients();
     br(2);pre(4);  ASSERT_TEST(y);
 	br(2);pre(4);printf("===>Testing of reading ingredients information <===");

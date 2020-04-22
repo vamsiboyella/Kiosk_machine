@@ -13,6 +13,7 @@
 #include <stdio.h>
 #include<string.h>
 #include "../include/ingredients.h"
+#include "../include/general_design.h"
 #define MAXCHAR 1000
 
 
@@ -82,12 +83,16 @@ int scan_new_ingredients(){
     char name[100];
     char category[100];
     char ingredients[200];
+	br(2);pre(4);
     printf("Enter Id for the Ingredient: ");
     scanf("%s",id);
+	br(2);pre(4);
     printf("Enter Ingredient Name:");
     scanf("%s",name);
+	br(2);pre(4);
     printf("Enter Category:");
     scanf("%s",category);
+	br(2);pre(4);
     printf("Enter Ingredients:");
     scanf("%s",ingredients);
     
