@@ -1,8 +1,11 @@
-1,Chicken McMuffin,Breakfast, wheat flour corn meal and corn flour, egg.
-2,Bacon N Egg Bagel with Sesame Bagel,Breakfast, wheat flour, malted barley flour, amylase.
-3,Egg BLT Bagel with Plain Bagel,Breakfast,Egg with clarified butter (unsalted butter)
-4,Sesame Bagel With Regular Cream Cheese,Breakfast, wheat flour amylase.
-5,Multigrain Bagel with Butter,Breakfast,Whole grain wheat flour flax seeds cornmeal  wheat bran
-6,Cinnamon Raisin Bagel with Butter,Breakfast, wheat flour  malt barley flour soy lecithin
-7,Mighty Angus Original,Beef,Unbleached wheat flour liquid whole eggs liquid egg-whites turmeric.
-8,Biryani,Dinner,dfa,
+1,McMuffin,Breakfast, wheat flour corn meal and corn flour, egg.
+2,Bagel,Breakfast, wheat flour, malted barley flour, amylase.
+3,Coffee,General,milk, cream, sugar, coffee powder.
+4,Ice-Cream,General(Dessert), milk, sugar, fruits.
+5,Burger,Lunch,Whole grain wheat flour, sesseme bun, ketchup, beef
+6,Pizza,Dinner, wheat flour  malt barley flour soy lecithin
+7,Angus,Dinner,Beef,Unbleached wheat flour turmeric.
+8,Biryani,Dinner,Rice, Spices, Chicken, Curry, Veggies,
+9,Smoothie, General, Puree, flax seeds, whey protien, banana, ice, milk
+10, Coke, General, Soda, Water, Coke formula
+66,Pulav,Dinner,Rice,

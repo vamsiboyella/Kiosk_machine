@@ -89,16 +89,16 @@ int main(int argc, char *argv[]){
 
 	head = NULL;	
 
-	insertfirst(1,"Hot Cake ",8,10.83);
-	insertend(2,"Coffee   ",46,3.23);
-	insertend(3,"Ice-Cream",46,6.23);
-	insertend(4,"Bagel ",34,12.23);
-	insertend(5,"Burger   ",23,11.00);	
-	insertend(6,"Pizza    ",13,16.00);
-	insertend(7,"Chicken Muffin",7,17.29);
-	insertend(8,"Angus",121,6.13);
-	insertend(9,"Cold Drinks",73,8.00);
-	insertend(10,"Biryani  ",83,13.00);
+	insertfirst(1,"McMuffin ",8,10.83);
+	insertend(2,"Coffee     ",46,3.23);
+	insertend(3,"Ice-Cream  ",46,6.23);
+	insertend(4,"Bagel      ",34,12.23);
+	insertend(5,"Burger     ",23,11.00);	
+	insertend(6,"Pizza      ",13,16.00);
+	insertend(7,"Smoothie   ",7,17.29);
+	insertend(8,"Angus      ",121,6.13);
+	insertend(9,"Coke       ",73,8.00);
+	insertend(10,"Biryani   ",83,13.00);
 
 
 	mainmenu:
