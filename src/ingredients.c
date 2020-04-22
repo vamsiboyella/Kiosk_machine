@@ -96,7 +96,7 @@ int scan_new_ingredients(){
     FILE *fptr;
 
  
-   fptr = fopen("menu.txt","a");
+   fptr = fopen("../assets/menu.txt","a");
 
    if(fptr == NULL)
    {
