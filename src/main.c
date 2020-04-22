@@ -26,6 +26,7 @@
 #include "../include/validations.h"
 
 #define MAX_LENGTH 16
+#define ADMIN_PASSWORD 12345678
 void start_automated_testing();
 
 
@@ -115,7 +116,6 @@ int main(int argc, char *argv[]){
 		if(main_menu_choice == 1){
 
 			foodlist:
-			
 			cls();
 			printf("=> 0. Main Menu "); 
 			foodlist();
@@ -135,7 +135,7 @@ int main(int argc, char *argv[]){
 
 			fflush(stdin);  scanf("%d",&admin_panel_choice);
 
-			if(admin_panel_choice==12345678){
+			if(admin_panel_choice==ADMIN_PASSWORD){
 
 				// node *temp;
 
