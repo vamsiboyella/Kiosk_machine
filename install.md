@@ -2,12 +2,11 @@
 
 ## Supported Platforms:
 
-Unix, Cygwin and MacOS.
+Cygwin and MingW in Windows(Master branch), Unix and Mac Os support in (Unix_branch).
 
 ## Prerequisite
 
 GCC Compiler, GNU make, download utilities such as wget or curl.
-If using Cygwin, dos2unix will be required
 
 
 ## Build Project:
@@ -18,3 +17,5 @@ make
 
 
 Excutable binary kiosk_machine file will be placed in `bin` directory.
+
+For test cases give 'kiosk_machine -t' in the path of executable file.
