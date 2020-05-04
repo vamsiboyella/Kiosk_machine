@@ -2,12 +2,12 @@
 
 ## Supported Platforms:
 
-Unix, Cygwin and MacOS.
+Unix, Mac Os (Unix_branch), MingW32 in Windows (Master branch)
 
 ## Prerequisite
 
 GCC Compiler, GNU make, download utilities such as wget or curl.
-If using Cygwin, dos2unix will be required
+
 
 
 ## Build Project:
