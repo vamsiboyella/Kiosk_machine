@@ -17,4 +17,4 @@ make clean
 make
 
 
-Excutable binary sensorfusion file will be placed in `bin` directory.
+Excutable binary kiosk_machine file will be placed in `bin` directory.
