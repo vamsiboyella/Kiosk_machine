@@ -2,7 +2,7 @@
 
 ## Supported Platforms:
 
-Cygwin and MingW in Windows(Master branch), Unix and Mac Os support in (Unix_branch).
+MinGW32in Windows(Master branch), Unix and Mac Os support in (Unix_branch branch).
 
 ## Prerequisite
 
