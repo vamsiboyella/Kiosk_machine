@@ -15,7 +15,7 @@
 // #include<conio.h>
 
 #include<string.h>
-#include<windows.h>
+#include<unistd.h>
 #include<time.h>
 #include <errno.h>
 
@@ -146,7 +146,7 @@ void automated_testing_linked_list(){
 
     moreitems: ;
      //Testing insertend function
-    // Sleep(1000);
+    // sleep(1000);
     // cls();
     br(2); pre(4);printf("Addding more items to the menu,and testing insert functions");
     br(3);pre(4);      printf(" Enter Food Name :  ");
@@ -193,7 +193,7 @@ void automated_testing_linked_list(){
      exist=exist->next;
 	}
     if(exist->data==fdata){
-    cls(); br(5);pre(3);  printf(" Food Item Id Already Exist, Please Re-Enter  "); Sleep(2000);
+    cls(); br(5);pre(3);  printf(" Food Item Id Already Exist, Please Re-Enter  "); sleep(2.000);
     goto validid;
     }
     insertend(fdata,ffoodname,fquantity,fprice);
@@ -219,7 +219,7 @@ void automated_testing_linked_list(){
     update: ;
     
     //Testing update item function
-    // Sleep(3000);
+    // sleep(3000);
     // cls();
     //middle1(); pre(4);printf("Now testing update function of linked list");
     
@@ -240,7 +240,7 @@ void automated_testing_linked_list(){
     // exist = list;
     while(exist->data!=fdata){
     if(exist->next==NULL){
-		cls(); br(5);pre(3);  printf(" Food Id doesn't exist, Please Re-Enter  "); Sleep(2000);
+		cls(); br(5);pre(3);  printf(" Food Id doesn't exist, Please Re-Enter  "); sleep(2.000);
         goto foodchoice_id;
     
      }
@@ -297,7 +297,7 @@ void automated_testing_linked_list(){
 		deletefood(fdelete);
 	}
 	else{
-	br(2); pre(2); printf("Please Enter Correct Number :  "); Sleep(500);
+	br(2); pre(2); printf("Please Enter Correct Number :  "); sleep(.500);
 	goto fdelete;
 	}
     foodlist();
@@ -305,7 +305,7 @@ void automated_testing_linked_list(){
 }
 void automated_order_pay_cancel_food(){
 
-    Sleep(1000);
+    sleep(1.000);
     cls();
     br(2); pre(3);printf(" Added burger and pizzza to the menu, to facilitate testing") ;
     insertend(5,"Burger   ",23,120.00);	
@@ -338,7 +338,7 @@ void automated_order_pay_cancel_food(){
     while(temp->data != get_food_choice){
 		temp = temp->next;
 		if(temp==NULL){
-			br(2); pre(4);  echo("Please make a Choice From List "); br(2); Sleep(1000);
+			br(2); pre(4);  echo("Please make a Choice From List "); br(2); sleep(1.000);
 			goto mainmenu;
 		}
 
@@ -352,13 +352,13 @@ void automated_order_pay_cancel_food(){
 		fflush(stdin); scanf("%d",&fcquantity); cls();
 
 		if(fcquantity==0){
-			cls(); middle1();pre(3); printf("Quantity Can not be Zero "); Sleep(2000);
+			cls(); middle1();pre(3); printf("Quantity Can not be Zero "); sleep(2.000);
 			cls();
             br(2); pre(4); printf("Please make the order once again: ");
 			goto mainmenu;
 		}
 		else if(fcquantity>temp->quantity){
-			cls(); middle1();pre(3); printf("Out of Stock ! "); Sleep(2000);
+			cls(); middle1();pre(3); printf("Out of Stock ! "); sleep(2.000);
             br(2); pre(4); printf("Please make the order once again: ");
 			goto mainmenu;
 		}		
@@ -405,7 +405,7 @@ void automated_order_pay_cancel_food(){
 				uquantity = individual_quantity[i]- food_quantity[i];
 				if(uquantity<0){
 					cls(); middle1();pre(3); printf("Out of Stock !");
-					middle1();pre(3); printf("Please make another  fresh order"); Sleep(2000);
+					middle1();pre(3); printf("Please make another  fresh order"); sleep(2.000);
 					goto mainmenu;
 				}
 				else{
@@ -462,7 +462,7 @@ void automated_order_pay_cancel_food(){
 				uquantity = individual_quantity[i]- food_quantity[i];				
 				if(uquantity<0){
 					cls(); middle1();pre(3); printf("Out of Stock !");
-					middle1();pre(3); printf("Please make another order"); Sleep(2000);
+					middle1();pre(3); printf("Please make another order"); sleep(2.000);
 					goto mainmenu;
 				}
 				else{
@@ -490,7 +490,7 @@ void automated_order_pay_cancel_food(){
 				{	cls();
 					middle1();pre(4);
 					printf("invalid!! try a valid card!!");
-					//Sleep(2000);
+					//sleep(2000);
 					free(input);
 					goto cardv;
 				}
@@ -584,7 +584,7 @@ void automated_order_pay_cancel_food(){
 
 }
 void automated_menu_ingredients_testing(){
-    Sleep(1000);
+    sleep(1.000);
    // cls();
     br(2);pre(4);printf("===>Testing of updating ingredients information <===");
 	br(2);pre(4);

@@ -13,14 +13,23 @@
 #include<stdlib.h>
 // #include<conio.h>
 #include<string.h>
-#include<windows.h>
+#include<unistd.h>
 #include<time.h>
 #include "../include/general_design.h"
+
+#define KNRM  "\x1B[0m"
+#define KRED  "\x1B[31m"
+#define KGRN  "\x1B[32m"
+#define KYEL  "\x1B[33m"
+#define KBLU  "\x1B[34m"
+#define KMAG  "\x1B[35m"
+#define KCYN  "\x1B[36m"
+#define KWHT  "\x1B[37m"
 
 
 void cls(){
 
-	system("cls");
+	system("clear");
 
 }
 
@@ -51,14 +60,14 @@ void span(int space){
 }
 void ccolor(int clr){
 
-	HANDLE  hConsole;
-	hConsole = GetStdHandle(STD_OUTPUT_HANDLE);
-	SetConsoleTextAttribute(hConsole, clr);
+	//HANDLE  hConsole;
+	//hConsole = GetStdHandle(STD_OUTPUT_HANDLE);
+	//SetConsoleTextAttribute(hConsole, clr);
 
 }
 
 void pwellcome(){
-	ccolor(26);
+	//ccolor(26);
 
 	char welcome[50]=" WELCOME ";
 	char welcome2[50]=" TO  ";
@@ -66,51 +75,53 @@ void pwellcome(){
 	char welcome4[50]=" KIOSK MACHINE  ";
 	printf("\n\n\n\n\n\t\t\t");
 	for(int wlc=0; wlc<strlen(welcome);wlc++){
-             ccolor(120+(wlc*9));
+             //ccolor(120+(wlc*9));
 
 		printf(" %c",welcome[wlc]);
-		Sleep(200);
+		sleep(0.200);
 	}
 	ccolor(26);
 	printf("\n\n\t\t\t\t ");
 	for(int wlc2=0; wlc2<strlen(welcome2) ;wlc2++){
-            ccolor(160+(wlc2*9));
+            //ccolor(160+(wlc2*9));
 
 		printf(" %c",welcome2[wlc2]);
-		Sleep(200);
+		sleep(0.200);
 	}
 	ccolor(26);
 	printf("\n\n\n\t\t\t ");
 	for(int wlc3=0; wlc3<strlen(welcome3) ;wlc3++){
-		if(welcome3[wlc3]!='D'){
-		    ccolor(121+(wlc3*4));
+		//if(welcome3[wlc3]!='D'){
+		    //ccolor(121+(wlc3*4));
 
 			printf(" %c",welcome3[wlc3]);
-		}
-		else{
-		    ccolor(11);
+		//}
+		//else{
+		    //ccolor(11);
 
-			printf(" %c",welcome3[wlc3]);
-		}
+			//printf(" %c",welcome3[wlc3]);
+		//}
 
-		Sleep(200);
+		sleep(0.200);
 	}
-	ccolor(26);
+
+	//ccolor(26);
 	printf("\n\n\n\t\t\t\t ");
-	for(int wlc3=0; wlc3<strlen(welcome4) ;wlc3++){
-		if(welcome4[wlc3]!='A' && welcome4[wlc3]!='E'){
-                ccolor(121+(wlc3*4));
+	for(int wlc4=0; wlc4<strlen(welcome4) ;wlc4++){
+		//if(welcome4[wlc3]!='A' && welcome4[wlc3]!='E'){
+                //ccolor(121+(wlc3*4));
 
-			printf(" %c",welcome4[wlc3]);
-		}
-		else{
-		    ccolor(11);
+			printf(" %c",welcome4[wlc4]);
+		//}
+		//else{
+		    //ccolor(11);
 
-			printf(" %c",welcome4[wlc3]);
-		}
-		Sleep(200);
+			//printf(" %c",welcome4[wlc3]);
+		//}
+		sleep(0.200);
 	}
-	ccolor(26);
+	printf("\n\n\t\t\t ");
+	//ccolor(26);
 
 }
 void loadingbar(void){
@@ -132,9 +143,9 @@ void loadingbar(void){
 			ccolor(26);
 
 		}
-		Sleep(100);
+		sleep(0.5);
 		if(i==90 || i==50 || i==96 || i==83){
-			Sleep(100);
+			sleep(1);
 		}
 
 	}
@@ -159,9 +170,9 @@ void backuploader(void){
 			ccolor(26);
 
 		}
-		Sleep(50);
+		sleep(0.8);
 		if(i==90 || i==50 || i==96 || i==83){
-			Sleep(50);
+			sleep(1);
 		}
 	}
 
@@ -179,9 +190,9 @@ void middtab1(void){
 void main_menu(){
 
 	cls();
-	br(5); pre(3); echo("===> 1. Food List"); Sleep(400);
-	br(2); pre(3); echo("===> 2. Admin Panel"); Sleep(400);
-	br(2); pre(3); echo("===> 3. Ingredients_Info");  Sleep(400);
+	br(5); pre(3); echo("===> 1. Food List"); sleep(0.4);
+	br(2); pre(3); echo("===> 2. Admin Panel"); sleep(0.4);
+	br(2); pre(3); echo("===> 3. Ingredients_Info");  sleep(0.4);
 	br(1);
 
 }

@@ -15,7 +15,7 @@
 #include <stdlib.h>
 //#include <conio.h>
 #include <string.h>
-#include <windows.h>
+#include <unistd.h>
 #include <time.h>
 #include <unistd.h>
 #include <stdbool.h>
@@ -67,8 +67,8 @@ int main(int argc, char *argv[]){
 
 
 	loadingbar(); cls();
-	pwellcome();
-	Sleep(300);
+	pwellcome(); 
+	sleep(4);
 	cls();
 
 	int c=0; int any;
@@ -102,6 +102,7 @@ int main(int argc, char *argv[]){
 
 
 	mainmenu:
+	//cls();
 	br(1);
 	totalprice=0.0;
 	counter=0;
@@ -129,7 +130,7 @@ int main(int argc, char *argv[]){
 
 			int admin_panel_choice;
 
-			cls(); middle1() ;   pre(4);  printf("1. Main Menu\n\n\t"); Sleep(300);
+			cls(); middle1() ;   pre(4);  printf("1. Main Menu\n\n\t"); sleep(0.3);
 			printf("Please Enter Password or ( 1 to Back in Main Menu ) : ");
 
 
@@ -145,16 +146,16 @@ int main(int argc, char *argv[]){
 
 				cls();  br(5); pre(4); echo("You are on Admin Pannel\n\n");
 				pre(4);
-				printf(" 1. Total Cash Today \n\n");Sleep(250);pre(4);
-				printf(" 2. View Card Pay \n\n");Sleep(250);pre(4);
-				printf(" 3. Add Food \n\n");Sleep(250);pre(4);
-				printf(" 4. Delete Food \n\n");Sleep(250);pre(4);
-				printf(" 5. Instant Food List \n\n");Sleep(250);pre(4);
-				printf(" 6. Update Food \n\n");Sleep(250);pre(4);
-				printf(" 7. Backup System\n\n");Sleep(250);pre(4);
-				printf(" 8. Instant Order Preview\n\n");Sleep(250);pre(4);
-				printf(" 9. Upgrade the ingredients information\n\n");Sleep(250);pre(4);
-				printf(" 0. Main Menu ");Sleep(250);
+				printf(" 1. Total Cash Today \n\n");sleep(0.25);pre(4);
+				printf(" 2. View Card Pay \n\n");sleep(0.25);pre(4);
+				printf(" 3. Add Food \n\n");sleep(0.25);pre(4);
+				printf(" 4. Delete Food \n\n");sleep(0.25);pre(4);
+				printf(" 5. Instant Food List \n\n");sleep(.250);pre(4);
+				printf(" 6. Update Food \n\n");sleep(.250);pre(4);
+				printf(" 7. Backup System\n\n");sleep(.250);pre(4);
+				printf(" 8. Instant Order Preview\n\n");sleep(.250);pre(4);
+				printf(" 9. Upgrade the ingredients information\n\n");sleep(.250);pre(4);
+				printf(" 0. Main Menu ");sleep(.250);
 
 				int adminchoise;
 
@@ -167,9 +168,9 @@ int main(int argc, char *argv[]){
 
 					cls();  middle1(); pre(4);   printf("Todays Total Cash : %0.2f  \n",totalmoney);
 
-					Sleep(2000);
+					sleep(2);
 
-					Sleep(2000);
+					sleep(2);
 					goto adminchoice;
 				}
 
@@ -191,17 +192,17 @@ int main(int argc, char *argv[]){
 							printf("|  %s  | %0.2f |\n",cardno[z],cardmoney[z]);pre(4);
 
 							printf("------------------------------\n");pre(4);
-							Sleep(150);
+							sleep(.150);
 
 						}
-						Sleep(1500);
+						sleep(1.500);
 					}
 
 					if(c==0){
 
 						cls();  middle1(); pre(4);
 					printf("No Card History\n");}
-					Sleep(1500);
+					sleep(1.500);
 					goto adminchoice;
 				}
 
@@ -260,7 +261,7 @@ int main(int argc, char *argv[]){
                       }
                       if(exist->data==fdata){
 
-                       cls(); br(5);pre(3);  printf(" Food Item Id Already Exist, Please Re-Enter  "); Sleep(2000);
+                       cls(); br(5);pre(3);  printf(" Food Item Id Already Exist, Please Re-Enter  "); sleep(2.000);
 
                        goto foodserial;
                       }
@@ -279,14 +280,14 @@ int main(int argc, char *argv[]){
 					}
 
 
-					br(2);pre(4);  printf("Submiting your data");for(int cs=0;cs<4;cs++){printf(" .");Sleep(500);}
+					br(2);pre(4);  printf("Submiting your data");for(int cs=0;cs<4;cs++){printf(" .");sleep(.500);}
 
 
 					insertend(fdata,ffoodname,fquantity,fprice);
 
 					br(2);pre(4);      printf("Adding Food  Successfull....\n");
 
-					Sleep(2000);
+					sleep(2.000);
 
 
 
@@ -314,7 +315,7 @@ int main(int argc, char *argv[]){
 						deletefood(fdelete);
 					}
 					else{
-						br(2); pre(2); printf("Please Enter Correct Number :  "); Sleep(500);
+						br(2); pre(2); printf("Please Enter Correct Number :  "); sleep(.500);
 						goto fdelete;
 					}
 
@@ -324,13 +325,13 @@ int main(int argc, char *argv[]){
 				}
 
 				else if(adminchoise==5){
-					cls();    foodlist(); Sleep(1000);		
+					cls();    foodlist(); sleep(1.000);		
 
 					br(2);pre(4);  printf("1. <-- back  \n\n");pre(5);
 
 					fflush(stdin);   scanf("%d",&any);
 
-					cls();    foodlist(); Sleep(1000);
+					cls();    foodlist(); sleep(1.000);
 
 					br(2);pre(4);  printf("1. <-- back  \n\n");pre(5);
 
@@ -359,7 +360,7 @@ int main(int argc, char *argv[]){
                     exist = list;
                     while(exist->data !=data){
                             if(exist->next==NULL){
-								cls(); br(5);pre(3);  printf(" Food Id doesn't exist, Please Re-Enter  "); Sleep(2000);
+								cls(); br(5);pre(3);  printf(" Food Id doesn't exist, Please Re-Enter  "); sleep(2.000);
                        			goto foodchoice_id;                             
                             }
                         exist=exist->next;
@@ -390,12 +391,12 @@ int main(int argc, char *argv[]){
 					goto fp;
 					}
 
-					br(2);pre(4);  printf("Updating Food item");for(int cs=0;cs<4;cs++){printf(" .");Sleep(500);}
+					br(2);pre(4);  printf("Updating Food item");for(int cs=0;cs<4;cs++){printf(" .");sleep(.500);}
 					updateitem(data,ffoodname,fquantity,fprice);
 
 					br(2);pre(4);      printf("Updating Food  Successfull....\n");
 
-					Sleep(2000);
+					sleep(2.000);
 
 					goto adminchoice;
 					
@@ -410,7 +411,7 @@ int main(int argc, char *argv[]){
 					fptr=fopen(date,"w");
 					backuploader();
 					if(fptr==NULL){
-						br(3); pre(3); printf("Error!"); Sleep(500);
+						br(3); pre(3); printf("Error!"); sleep(.500);
 						goto adminchoice;
 					}
 					fprintf(fptr,"Total Cash Today : %0.2f\n\n\n",totalmoney);
@@ -418,7 +419,7 @@ int main(int argc, char *argv[]){
 					for(int l=1; l<=c;l++){
 						fprintf(fptr,"%s ------- %0.2f \n",cardno[l],cardmoney[l]);
 					}
-					br(2);pre(4); printf("Backup Successfull..."); Sleep(1500);
+					br(2);pre(4); printf("Backup Successfull..."); sleep(1.500);
 					fclose(fptr);
 
 
@@ -443,7 +444,7 @@ int main(int argc, char *argv[]){
 					cls();
 					int i= scan_new_ingredients();
 					if(i){						
-						br(2);pre(4); printf("Update of food infromation successfull..."); Sleep(1500);
+						br(2);pre(4); printf("Update of food infromation successfull..."); sleep(1.500);
 						goto adminchoice;
 					}
 					else{
@@ -458,7 +459,7 @@ int main(int argc, char *argv[]){
 				}
 
 				else{
-					br(2); pre(4); printf("Please Select From List :  "); Sleep(500);
+					br(2); pre(4); printf("Please Select From List :  "); sleep(.500);
 					goto adminchoice;
 				}
 
@@ -480,11 +481,11 @@ int main(int argc, char *argv[]){
 			cls();
 			int i=read_Ingredients();
 			if(i){
-			Sleep(4000);
+			sleep(4.000);
 			goto mainmenu;
 			}
 			else{
-			Sleep(4000);
+			sleep(4.000);
 			goto mainmenu;
 			}
 
@@ -492,7 +493,7 @@ int main(int argc, char *argv[]){
 
 	}
 	else{
-		br(2); pre(4); printf("Please Enter Correct Choice"); Sleep(300);
+		br(2); pre(4); printf("Please Enter Correct Choice"); sleep(.300);
 		goto mainmenu;
 	}
 	int get_food_choice;
@@ -512,7 +513,7 @@ int main(int argc, char *argv[]){
 
 		temp = temp->next;
 		if(temp==NULL){
-			br(2); pre(4);  echo("Please make a Choice From List "); br(2); Sleep(1000);
+			br(2); pre(4);  echo("Please make a Choice From List "); br(2); sleep(1.000);
 			goto foodlist;
 		}
 
@@ -528,12 +529,12 @@ int main(int argc, char *argv[]){
 		fflush(stdin); scanf("%d",&fcquantity); cls();
 
 		if(fcquantity==0){
-			cls(); middle1();pre(3); printf("Quantity Can not be Zero "); Sleep(2000);
+			cls(); middle1();pre(3); printf("Quantity Can not be Zero "); sleep(2.000);
 			cls();
 			goto mainmenu;
 		}
 		else if(fcquantity>temp->quantity){
-			cls(); middle1();pre(3); printf("Out of Stock ! "); Sleep(2000);
+			cls(); middle1();pre(3); printf("Out of Stock ! "); sleep(2.000);
 			goto mainmenu;
 		}		
 		food_choice[counter]=get_food_choice;
@@ -579,7 +580,7 @@ int main(int argc, char *argv[]){
 				uquantity = individual_quantity[i]- food_quantity[i];
 				if(uquantity<0){
 					cls(); middle1();pre(3); printf("Out of Stock !");
-					middle1();pre(3); printf("Please make another  fresh order"); Sleep(2000);
+					middle1();pre(3); printf("Please make another  fresh order"); sleep(2.000);
 					goto mainmenu;
 				}
 				else{
@@ -624,7 +625,7 @@ int main(int argc, char *argv[]){
 				uquantity = individual_quantity[i]- food_quantity[i];				
 				if(uquantity<0){
 					cls(); middle1();pre(3); printf("Out of Stock !");
-					middle1();pre(3); printf("Please make another order"); Sleep(2000);
+					middle1();pre(3); printf("Please make another order"); sleep(2.000);
 					goto mainmenu;
 				}
 				else{
@@ -654,7 +655,7 @@ int main(int argc, char *argv[]){
 				{	cls();
 					middle1();pre(4);
 					printf("invalid!! try a valid card!!");
-					//Sleep(2000);
+					//sleep(2000);
 					free(input);
 					goto cardv;
 				}
@@ -731,7 +732,7 @@ int main(int argc, char *argv[]){
 
 	}
 	else{
-		br(2); pre(4); echo("Please Choice From List"); br(2);Sleep(300);
+		br(2); pre(4); echo("Please Choice From List"); br(2);sleep(.300);
 		goto mainmenu;
 	}
 

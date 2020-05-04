@@ -13,7 +13,7 @@
 #include<stdlib.h>
 //#include<conio.h>
 #include<string.h>
-#include<windows.h>
+#include<unistd.h>
 #include<time.h>
 #include "../include/general_design.h"
 #include "../include/admin.h"
@@ -88,13 +88,13 @@ void deletefood(int serial){
 
 			temp->next = temp->next->next;
 			cls();
-			printf("\n\n\n\n\t\t\tDeleting Item %d ",serial);for(int cs=0;cs<4;cs++){printf(" .");Sleep(400);}
+			printf("\n\n\n\n\t\t\tDeleting Item %d ",serial);for(int cs=0;cs<4;cs++){printf(" .");sleep(0.4);}
 
-			printf("\n\n\n\n\t\t\tDeleted Successfylly \n"); Sleep(500);
+			printf("\n\n\n\n\t\t\tDeleted Successfylly \n"); sleep(0.5);
 
 		}
 		else{
-			printf("\n\n\n\n\t\t\tFood Item Not Found\n"); Sleep(500);
+			printf("\n\n\n\n\t\t\tFood Item Not Found\n"); sleep(500);
 		}
 
 		head = temp ;
@@ -104,9 +104,9 @@ void deletefood(int serial){
 
 		temp = temp->next;
 		cls();
-		printf("\n\n\n\n\t\t\tDeleting Item %d ",serial);for(int cs=0;cs<4;cs++){printf(" .");Sleep(400);}
+		printf("\n\n\n\n\t\t\tDeleting Item %d ",serial);for(int cs=0;cs<4;cs++){printf(" .");sleep(0.4);}
 
-		printf("\n\n\n\n\t\t\tDeleted Successfylly \n"); Sleep(500);
+		printf("\n\n\n\n\t\t\tDeleted Successfylly \n"); sleep(500);
 
 		head = temp ;
 
@@ -189,7 +189,7 @@ void foodlist(){
 
 		temp = temp->next ;
 
-		Sleep(100);
+		sleep(0.1);
 
 	}
 
@@ -239,7 +239,7 @@ void display_menu(int order, int quantity, int or_no){
 		printf("\n\t\t"); ccolor(62);
 		printf("-------------------------------------------------------");
 
-		Sleep(100);
+		sleep(0.1);
 
 	}
 
