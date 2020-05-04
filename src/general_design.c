@@ -77,15 +77,15 @@ void pwellcome(){
 	for(int wlc=0; wlc<strlen(welcome);wlc++){
              //ccolor(120+(wlc*9));
 
-		printf(" %c",welcome[wlc]);
+		printf("%s%c",KRED,welcome[wlc]);
 		sleep(0.200);
 	}
 	ccolor(26);
-	printf("\n\n\t\t\t\t ");
+	printf("\n\n\t\t\t\t");
 	for(int wlc2=0; wlc2<strlen(welcome2) ;wlc2++){
             //ccolor(160+(wlc2*9));
 
-		printf(" %c",welcome2[wlc2]);
+		printf(" %s%c",KGRN,welcome2[wlc2]);
 		sleep(0.200);
 	}
 	ccolor(26);
@@ -94,12 +94,12 @@ void pwellcome(){
 		//if(welcome3[wlc3]!='D'){
 		    //ccolor(121+(wlc3*4));
 
-			printf(" %c",welcome3[wlc3]);
+			printf(" %s%c",KYEL,welcome3[wlc3]);
 		//}
 		//else{
 		    //ccolor(11);
 
-			//printf(" %c",welcome3[wlc3]);
+			//printf(" %s%c",welcome3[wlc3]);
 		//}
 
 		sleep(0.200);
@@ -111,7 +111,7 @@ void pwellcome(){
 		//if(welcome4[wlc3]!='A' && welcome4[wlc3]!='E'){
                 //ccolor(121+(wlc3*4));
 
-			printf(" %c",welcome4[wlc4]);
+			printf(" %s%c",KBLU,welcome4[wlc4]);
 		//}
 		//else{
 		    //ccolor(11);

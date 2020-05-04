@@ -481,12 +481,34 @@ int main(int argc, char *argv[]){
 			cls();
 			int i=read_Ingredients();
 			if(i){
-			sleep(4.000);
-			goto mainmenu;
+			//sleep(4.000);
+			br(2);pre(4);  printf("1. Main Menu ");
+				menu_screen: ;
+				int ps_menu;
+
+				fflush(stdin);  scanf("%d",&ps_menu);
+
+				
+				if(ps_menu==1){goto mainmenu;}
+				else{br(2);pre(4);printf("Please enter 1 to go to main menu: "); goto menu_screen;}
+
+
+			//goto mainmenu;
 			}
 			else{
-			sleep(4.000);
-			goto mainmenu;
+			//sleep(4.000);
+			//goto mainmenu;
+			br(2);pre(4);  printf("1. Main Menu ");
+				menu_screen2: ;
+				int ps_menu;
+
+				fflush(stdin);  scanf("%d",&ps_menu);
+
+				
+				if(ps_menu==1){goto mainmenu;}
+				else{br(2);pre(4);printf("Please enter 1 to go  to main menu : "); goto menu_screen2;}
+
+
 			}
 
 		}

@@ -18,6 +18,9 @@
 #include "../include/general_design.h"
 #include "../include/admin.h"
 
+#define KWHT  "\x1B[37m"
+#define KNRM  "\x1B[0m"
+
 struct Node{
 
 	char foodname[50];
@@ -162,13 +165,18 @@ void updatefood(int udata, int uquantity){
 
 void foodlist(){
 
-	ccolor(26);
-
-	printf("\n\t\t"); ccolor(240);
+	//ccolor(26);
+	printf("%s",KWHT);
+	printf("\n\t\t"); //ccolor(240); 
+	printf("%s",KNRM);
 	printf("______________________________________________________ ");ccolor(26);
-	printf("\n\t\t"); ccolor(240);
+	printf("\n\t\t");
+	//ccolor(240);
+	printf("%s",KNRM);
 	printf("|  Food No.  |   FooD Name   |  Price  |   In Stock   |");ccolor(26);
-	printf("\n\t\t"); ccolor(240);
+	printf("\n\t\t");
+	//ccolor(240);
+	printf("%s",KNRM);
 	printf("-------------------------------------------------------");ccolor(26);
 
 	node *temp;
@@ -177,12 +185,14 @@ void foodlist(){
 
 	while(temp != NULL){
 
-		ccolor(26);
+		//ccolor(26);
+		printf("%s",KWHT);
 
 
 		printf("\n\t\t"); ccolor(62);
 		printf("|     %d      |    %s  |    %0.2f   |    %d    |",temp->data,temp->foodname, temp->price, temp->quantity);
-		ccolor(26);
+		//ccolor(26);
+		printf("%s",KWHT);
 		printf("\n\t\t"); ccolor(62);
 		printf("-------------------------------------------------------");
 
@@ -193,7 +203,8 @@ void foodlist(){
 
 	}
 
-	ccolor(26);
+	//ccolor(26);
+	printf("%s",KWHT);
 
 	//  free(temp);
 

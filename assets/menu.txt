@@ -10,3 +10,5 @@
 10, Coke, General, Soda, Water, Coke formula
 66,Pulav,Dinner,Rice.
 4,BB,aBB,BB
+99,Pizza,Dinner,Crust,
+66,biryani,dinner,rice
